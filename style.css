@@ -70,6 +70,43 @@ nav {
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
+/* Schwarzes Brett */
+.accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 1em;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: background-color 0.2s ease;
+      margin-bottom: 0.5em;
+      font-weight: bold;
+    }
+
+    .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 0 1em;
+      display: none;
+      background-color: #f9f9f9;
+      overflow: hidden;
+      border-left: 3px solid #0074d9;
+    }
+
+    .panel.show {
+      display: block;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
 /* =====================
    Hauptbereich + Footer
 ===================== */
@@ -143,6 +180,8 @@ footer {
   color: #555;
   margin: 0.2rem 0;
 }
+
+
 
 /* =====================
    Responsive
