@@ -15,12 +15,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const aktuelles = [
       {
         title: "Stellenangebot: SHK gesucht",
-        category: "Stellenangebote",
+        category: "Jobangebote",
         content: "<p>Für die Abteilung Kognitionspsychologie wird ab <strong>November 2025</strong> eine <em>studentische Hilfskraft</em> gesucht.</p><p>Bei Interesse melden Sie sich bei <a href='mailto:someone@example.com'>someone@example.com</a>.</p>"
       },
       {
         title: "Workshop zur qualitativen Forschung",
-        category: "Kongresse & Tagungen",
+        category: "Kongresse und Workshops",
+        content: "<p>Am <strong>7. Oktober</strong> findet ein Online-Workshop via Zoom statt.</p><img src='images/workshop.jpg' alt='Workshop Bild' style='max-width:100%; height:auto;'>"
+      },
+      {
+        title: "Workshop zur qualitativen Forschung",
+        category: "Praktikumsstellen",
+        content: "<p>Am <strong>7. Oktober</strong> findet ein Online-Workshop via Zoom statt.</p><img src='images/workshop.jpg' alt='Workshop Bild' style='max-width:100%; height:auto;'>"
+      },
+      {
+        title: "Workshop zur qualitativen Forschung",
+        category: "Infoveranstaltungen",
+        content: "<p>Am <strong>7. Oktober</strong> findet ein Online-Workshop via Zoom statt.</p><img src='images/workshop.jpg' alt='Workshop Bild' style='max-width:100%; height:auto;'>"
+      },
+      {
+        title: "Workshop zur qualitativen Forschung",
+        category: "Newsletter",
         content: "<p>Am <strong>7. Oktober</strong> findet ein Online-Workshop via Zoom statt.</p><img src='images/workshop.jpg' alt='Workshop Bild' style='max-width:100%; height:auto;'>"
       }
     ];
