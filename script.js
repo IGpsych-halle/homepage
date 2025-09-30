@@ -12,37 +12,24 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 */
-    const aktuelles = [
-      {
-        title: "Stellenangebot: SHK gesucht",
-        category: "Jobangebote",
-        content: "<p>Für die Abteilung Kognitionspsychologie wird ab <strong>November 2025</strong> eine <em>studentische Hilfskraft</em> gesucht.</p><p>Bei Interesse melden Sie sich bei <a href='mailto:someone@example.com'>someone@example.com</a>.</p>"
-      },
-      {
-        title: "Workshop zur qualitativen Forschung",
-        category: "Kongresse und Workshops",
-        content: "<p>Am <strong>7. Oktober</strong> findet ein Online-Workshop via Zoom statt.</p><img src='images/workshop.jpg' alt='Workshop Bild' style='max-width:100%; height:auto;'>"
-      },
-      {
-        title: "Workshop zur qualitativen Forschung",
-        category: "Praktikumsstellen",
-        content: "<p>Am <strong>7. Oktober</strong> findet ein Online-Workshop via Zoom statt.</p><img src='images/workshop.jpg' alt='Workshop Bild' style='max-width:100%; height:auto;'>"
-      },
-      {
-        title: "Workshop zur qualitativen Forschung",
-        category: "Infoveranstaltungen",
-        content: "<p>Am <strong>7. Oktober</strong> findet ein Online-Workshop via Zoom statt.</p><img src='images/workshop.jpg' alt='Workshop Bild' style='max-width:100%; height:auto;'>"
-      },
-      {
-        title: "Workshop zur qualitativen Forschung",
-        category: "Newsletter",
-        content: "<p>Am <strong>7. Oktober</strong> findet ein Online-Workshop via Zoom statt.</p><img src='images/workshop.jpg' alt='Workshop Bild' style='max-width:100%; height:auto;'>"
-      }
-    ];
+   // Liste aller JSON-Dateien
+  const jsonDateien = [
+    "json-files/jobangebote.json",
+    "json-files/kongresseundworkshops.json",
+    "json-files/newsletter.json",
+    "json-files/infoveranstaltungen.json",
+    "json-files/praktikumsstellen.json"
+  ];
+
+  // Daten sammeln
+  const alleEintraege = [];
+
+  // Funktion: Accordion erzeugen aus gruppierten Daten
+  function zeigeEintraege(eintraege) {
+    const kategorien = {};
 
     // Gruppieren nach Kategorie
-    const kategorien = {};
-    aktuelles.forEach(item => {
+    eintraege.forEach(item => {
       if (!kategorien[item.category]) {
         kategorien[item.category] = [];
       }
@@ -52,13 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("aktuellesContainer");
 
     for (let kat in kategorien) {
-      // Kategorie-Accordion-Button
       const btn = document.createElement("button");
       btn.className = "accordion";
       btn.textContent = kat;
       container.appendChild(btn);
 
-      // Panel erstellen
       const panel = document.createElement("div");
       panel.className = "panel";
 
@@ -72,10 +57,39 @@ document.addEventListener("DOMContentLoaded", () => {
       container.appendChild(panel);
     }
 
-    // Accordion-Funktion
+    // Accordion aktivieren
     document.querySelectorAll(".accordion").forEach(btn => {
       btn.addEventListener("click", () => {
         const panel = btn.nextElementSibling;
         panel.classList.toggle("show");
       });
     });
+  }
+
+  // Funktion: Alle JSON-Dateien laden
+  function ladeAlleJSONs(dateien) {
+    let geladen = 0;
+
+    dateien.forEach(datei => {
+      fetch(datei)
+        .then(res => {
+          if (!res.ok) throw new Error(`Fehler beim Laden: ${datei}`);
+          return res.json();
+        })
+        .then(data => {
+          alleEintraege.push(...data);
+          geladen++;
+
+          // Wenn alle geladen wurden, dann anzeigen
+          if (geladen === dateien.length) {
+            zeigeEintraege(alleEintraege);
+          }
+        })
+        .catch(err => {
+          console.error("Fehler beim Laden der Datei", datei, err);
+        });
+    });
+  }
+
+  // Start
+  ladeAlleJSONs(jsonDateien);
