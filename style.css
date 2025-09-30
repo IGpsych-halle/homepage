@@ -71,6 +71,31 @@ nav {
 }
 
 /* Schwarzes Brett */
+.entry {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1em 1.2em;
+  margin: 1em 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.entry:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.entry-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.6em;
+  padding: 0.4em 0.6em;
+  background: #E8F4FF;
+  border-left: 5px solid #0074d9;
+  border-radius: 6px;
+  color: #004b8d;
+}
+
 .accordion {
       background-color: #eee;
       color: #444;

@@ -40,10 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       kategorien[kat].forEach(entry => {
         const block = document.createElement("div");
-        block.style.marginBottom = "1.5em";
-        block.innerHTML = `<h3>${entry.title}</h3>${entry.content}`;
+        block.className = "entry"; // neue CSS-Klasse
+        block.innerHTML = `<h3 class="entry-title">${entry.title}</h3>${entry.content}`;
         panel.appendChild(block);
       });
+
 
       container.appendChild(panel);
     }
