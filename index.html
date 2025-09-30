@@ -4,85 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Startseite – Institutsgruppe</title>
-
-<!-- Test: Inline-CSS (einfügen in <head> der index.html) -->
-<style>
-  /* Header layout + responsive nav (Override für Debug) */
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 18px 36px;
-    background: #00529b;
-    color: #fff;
-  }
-
-  /* Logo: max. Breite setzen, sonst wird es riesig */
-  .logo {
-    height: 110px;      /* feste Höhe */
-    width: auto;
-    max-width: 38%;     /* wichtig: verhindert, dass Logo die ganze Breite nimmt */
-    object-fit: contain;
-    flex: 0 0 auto;
-  }
-
-  /* Nav nimmt den restlichen Platz ein und zentriert die Links rechts davon */
-  nav {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 22px;
-  }
-
-  .nav-links a {
-    display: inline-block;
-    padding: 10px 16px;
-    border-radius: 8px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.12rem;
-    transition: transform .22s ease, box-shadow .22s ease, color .18s ease, background .18s ease;
-  }
-
-  .nav-links a:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 10px 28px rgba(0,87,255,0.14);
-    background: rgba(255,255,255,0.06);
-    color: #ffde59;
-  }
-
-  .nav-links a.active {
-    background: rgba(255,255,255,0.08);
-    color: #ffde59;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  }
-
-  @media (max-width: 820px) {
-    header { flex-direction: column; gap: 10px; padding: 14px; }
-    .logo { max-width: 60%; height: 90px; }
-    nav { width: 100%; }
-    .nav-links { justify-content: center; flex-wrap: wrap; gap: 12px; }
-  }
-</style>
-
-  
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="header">
-    <img src="assets/logo.JPG" alt="Logo" class="logo" />
-    <nav class="nav">
+  <!-- Header -->
+  <header>
+    <img src="assets/logo.JPG" alt="Logo der Institutsgruppe" class="logo" />
+    <nav>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Start</a></li>
         <li><a href="about.html">Über uns</a></li>
@@ -92,13 +21,18 @@
     </nav>
   </header>
 
+  <!-- Hauptbereich -->
   <main class="fade-in">
     <section>
       <h1>Willkommen bei der Institutsgruppe Psychologie Halle</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet.</p>
+      <p>
+        Wir sind die Institutsgruppe Psychologie an der Martin-Luther-Universität Halle-Wittenberg.
+        Hier erfährst du alles über unsere Arbeit, aktuelle Veranstaltungen und Kontaktmöglichkeiten.
+      </p>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Institutsgruppe Psychologie</p>
   </footer>
