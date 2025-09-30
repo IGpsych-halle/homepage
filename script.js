@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Seite geladen.");
 });
 
- /*const acc = document.querySelectorAll(".accordion");
+ const acc = document.querySelectorAll(".accordion");
 
     acc.forEach(button => {
       button.addEventListener("click", () => {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         panel.classList.toggle("show");
       });
     });
-*/
+
    // Liste aller JSON-Dateien
   const jsonDateien = [
     "json-files/jobangebote.json",
