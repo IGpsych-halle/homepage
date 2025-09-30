@@ -3,15 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Seite geladen.");
 });
 
- const acc = document.querySelectorAll(".accordion");
-
-    acc.forEach(button => {
-      button.addEventListener("click", () => {
-        const panel = button.nextElementSibling;
-        panel.classList.toggle("show");
-      });
-    });
-
    // Liste aller JSON-Dateien
   const jsonDateien = [
     "json-files/jobangebote.json",
@@ -35,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       kategorien[item.category].push(item);
     });
-
+    console.log("Einträge erhalten:", eintraege);
     const container = document.getElementById("aktuellesContainer");
 
     for (let kat in kategorien) {
@@ -56,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       container.appendChild(panel);
     }
+    console.log("Kategorien:", kategorien);
 
     // Accordion aktivieren
     document.querySelectorAll(".accordion").forEach(btn => {
@@ -64,6 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
         panel.classList.toggle("show");
       });
     });
+    
+    
   }
 
   // Funktion: Alle JSON-Dateien laden
