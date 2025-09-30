@@ -19,8 +19,8 @@ header {
   justify-content: space-between;
   gap: 20px;
   padding: 18px 36px;
-  background: #00529b;
-  color: #2E294E;
+  background: #2E294E;
+  color: #fff;
 }
 
 .logo {
