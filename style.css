@@ -223,6 +223,11 @@ footer {
     height: 90px;
   }
 
+  .group_photo {
+    max-width: fit-content;
+    height: auto;
+  }
+
   nav {
     width: 100%;
   }
