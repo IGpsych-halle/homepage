@@ -188,8 +188,8 @@ footer {
 }
 
 .team-card img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 0.8rem;
