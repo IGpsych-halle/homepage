@@ -59,7 +59,7 @@ nav {
 
 .nav-links a:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 10px 28px rgba(0,87,255,0.14);
+  box-shadow: 0 10px 28px #E8C1C5;
   background: rgba(255,255,255,0.06);
   color: #E8C1C5;
 }
