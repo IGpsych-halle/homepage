@@ -323,11 +323,12 @@ footer {
   color: var(--light-rose);
   font-size: 1.3rem;
   transition: color 0.2s ease, transform 0.2s ease;
-  white-space: normal;       /* verhindert horizontales Überlaufen */
-  text-align: center;        /* schön zentriert */
-  word-wrap: break-word;     /* bricht wirklich lange Emails */
-  max-width: 100%;           /* sicherstellen, dass sie nicht über Container hinaus gehen */
+  text-align: center;
+  max-width: 100%;
+  word-break: break-all;       /* bricht das Wort, falls nötig */
+  overflow-wrap: anywhere;     /* bevorzugt schöne Stellen zum Umbrechen */
 }
+
 
 
 .team-card .contact a:hover {
