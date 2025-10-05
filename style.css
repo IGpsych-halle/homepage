@@ -638,9 +638,12 @@ footer {
 }
 
 .panel.show {
-  max-height: 1500px; /* groß genug für alle Inhalte */
+  /* entferne fixe Höhe → dynamisch durch Inhalt */
+  max-height: none;
   padding: 1.2rem 1.4rem;
+  overflow: visible;
 }
+
 
 /* === Einträge innerhalb der Panels === */
 .entry {
