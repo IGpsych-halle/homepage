@@ -723,6 +723,10 @@ footer {
   margin-bottom: 0.4rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 0.3rem;
+  overflow-wrap: break-word;
+  word-break: normal;        /* verhindert Brüche mitten im Wort */
+  line-break: anywhere;      /* erlaubt Brüche nach Sonderzeichen */
+  white-space: normal;
 }
 
 .entry p,
