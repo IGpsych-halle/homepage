@@ -468,6 +468,7 @@ footer {
   }
 
   .group_photo {
+    display: none;
     width: 100%;
     border-radius: 16px;
   }
