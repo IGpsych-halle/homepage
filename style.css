@@ -313,16 +313,21 @@ footer {
 .team-card .contact {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;        /* zwingt Items zum Umbrechen */
   gap: 0.8rem;
-  flex-wrap: wrap;          /* wichtig: Items dürfen umbrechen */
 }
 
 .team-card .contact a {
-  max-width: 100%;          /* sorgt dafür, dass Links nicht überlaufen */
-  word-break: break-word;   /* bricht lange Wörter sauber */
-  overflow-wrap: anywhere;  /* bevorzugt Punkte oder Bindestriche */
+  display: inline-block;       /* damit max-width greift */
+  max-width: 100%;             /* darf nicht über Card hinausragen */
+  word-break: break-word;      /* lange Strings umbrechen */
+  overflow-wrap: anywhere;     /* bricht auch lange E-Mail-Adressen */
   text-align: center;
+  color: var(--light-rose);
+  font-size: 1.3rem;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
+
 
 
 
