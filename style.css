@@ -428,6 +428,134 @@ footer {
   }
 }
 
+/* === Events Timeline === */
+.events-section {
+  padding: 80px 10%;
+  background: linear-gradient(180deg, var(--navy) 0%, var(--violet) 100%);
+  color: white;
+}
+
+.events-section h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--light-rose);
+  margin-bottom: 1rem;
+}
+
+.events-section .intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e8dbe8;
+}
+
+/* Timeline Struktur */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.event-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+}
+
+.event-card.left .event-content {
+  order: 1;
+}
+.event-card.left .event-image {
+  order: 2;
+}
+.event-card.right .event-content {
+  order: 2;
+}
+.event-card.right .event-image {
+  order: 1;
+}
+
+/* Textinhalt */
+.event-content {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.event-content h2 {
+  color: var(--light-rose);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.event-content .date {
+  font-weight: 700;
+  color: var(--rose);
+  margin-bottom: 1rem;
+}
+
+.event-content .desc {
+  line-height: 1.6;
+}
+
+/* Bilder */
+.event-image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  border: 3px solid var(--rose);
+  object-fit: cover;
+  aspect-ratio: 3 / 4; /* Hochformat */
+  transition: transform 0.3s ease;
+}
+
+.event-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Timeline Linie (dekorativ) */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(var(--rose), transparent);
+  transform: translateX(-50%);
+  opacity: 0.3;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .event-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .event-image img {
+    max-width: 70%;
+  }
+  .timeline::before {
+    display: none;
+  }
+}
+
+
 
 
 /* =========================================
