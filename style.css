@@ -486,7 +486,7 @@ footer {
 
 /* === Events Timeline === */
 .events-section {
-  padding: 40px 10% 80px; /* oben weniger, unten bleibt großzügig */
+  padding: 40px clamp(1rem, 6vw, 5rem) 80px;
   background: linear-gradient(180deg, var(--navy) 0%, var(--violet) 100%);
   color: white;
 }
