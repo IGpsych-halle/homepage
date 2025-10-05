@@ -274,6 +274,12 @@ footer {
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
+.team-card p {
+  word-break: break-word;      /* bricht lange, ununterbrochene Wörter */
+  overflow-wrap: anywhere;     /* noch robuster */
+  hyphens: auto;               /* optional: Silbentrennung */
+}
+
 .team-card:hover {
   transform: translateY(-6px);
   background: rgba(144, 85, 162, 0.25);
@@ -303,29 +309,6 @@ footer {
   margin: 0.4rem 0;
 }
 
-.team-card p.role {
-  font-size: 1rem;
-  color: var(--rose);
-  margin: 0.3rem 0 1rem;
-}
-
-/* Kontaktinfos (z. B. E-Mail oder Icons) */
-.team-card .contact {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;      /* Items dürfen umbrechen */
-  gap: 0.8rem;
-}
-
-.team-card .contact a {
-  display: block;       /* Block-Element innerhalb Flex-Container */
-  max-width: 100%;      /* darf nicht über die Card hinaus */
-  word-break: break-word;  /* bricht lange Wörter / Emails */
-  overflow-wrap: anywhere; /* noch robuster */
-  text-align: center;
-  color: var(--light-rose);
-  font-size: 1rem;      /* ggf. kleiner auf Mobile */
-}
 
 
 
