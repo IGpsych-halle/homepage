@@ -98,3 +98,20 @@ function ladeAlleJSONs(dateien) {
 
 // Start
 ladeAlleJSONs(jsonDateien);
+
+//MOBILE FUNCTIONS//
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+
+    // Optional: Hamburger Animation (3 Striche -> X)
+    hamburger.classList.toggle("active");
+  });
+});
+
+
+
+
