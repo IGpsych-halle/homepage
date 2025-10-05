@@ -547,10 +547,10 @@ footer {
   order: 2;
 }
 .event-card.right .event-content {
-  order: 2;
+  order: 1;
 }
 .event-card.right .event-image {
-  order: 1;
+  order: 2;
 }
 
 /* Textinhalt */
