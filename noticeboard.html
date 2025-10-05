@@ -1,24 +1,58 @@
-<main class="fade-in">
-  <section class="noticeboard-section">
-    <div class="page-header">
-      <h1>Schwarzes Brett</h1>
-      <p>Aktuelle Aushänge, Mitteilungen und Informationen für Studierende</p>
-    </div>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schwarzes Brett – Institutsgruppe Psychologie</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
 
-    <div id="aktuellesContainer" class="noticeboard-grid">
-      <!-- Dynamische Inhalte per JS -->
-      <!-- Beispielkarten, falls du statisch etwas zeigen willst: -->
-      <div class="notice-card">
-        <h2>Raumänderung: Statistik-Vorlesung</h2>
-        <p class="notice-date">05. Oktober 2025</p>
-        <p>Die Vorlesung „Statistik II“ findet ab kommender Woche im Hörsaal 3 statt (statt Hörsaal 2).</p>
+<body>
+  <!-- =======================
+       HEADER
+  ======================== -->
+  <header class="site-header">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="noticeboard.html" class="active">Schwarzes Brett</a></li>
+        <li><a href="events.html">Veranstaltungen</a></li>
+        <li><a href="importantfiles.html">Wichtige Dokumente</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- =======================
+       MAIN CONTENT
+  ======================== -->
+  <main class="fade-in">
+    <section class="noticeboard-section">
+      <div class="page-header">
+        <h1>Schwarzes Brett</h1>
+        <p>Aktuelle Mitteilungen, Ausschreibungen und Informationen für Studierende</p>
       </div>
 
-      <div class="notice-card">
-        <h2>Neue Sprechzeiten der Studienberatung</h2>
-        <p class="notice-date">02. Oktober 2025</p>
-        <p>Die Studienberatung bietet ab sofort mittwochs von 10–12 Uhr Sprechstunden im Raum 104 an.</p>
+      <div id="aktuellesContainer">
+        <!-- Dynamische Inhalte werden per JS eingefügt -->
+        <!-- Beispiel-Fallback (wird angezeigt, falls kein JS aktiv ist): -->
+        <noscript>
+          <p style="color: var(--rose); text-align: center; margin-top: 1rem;">
+            Bitte aktivieren Sie JavaScript, um die aktuellen Einträge des Schwarzen Bretts anzuzeigen.
+          </p>
+        </noscript>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
+
+  <!-- =======================
+       FOOTER
+  ======================== -->
+  <footer>
+    <p>&copy; 2025 Institutsgruppe Psychologie</p>
+  </footer>
+</body>
+</html>
+
