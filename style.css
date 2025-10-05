@@ -1,13 +1,29 @@
+/* === Farbpalette === */
+:root {
+  --dark-blue: #011638;
+  --violet: #2E294E;
+  --purple: #9055A2;
+  --rose: #D499B9;
+  --light-rose: #E8C1C5;
+}
+
 /* =====================
    Globales Layout
 ===================== */
-body {
+/*body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
+}*/
+
+body {
+  background: linear-gradient(135deg, var(--dark-blue), var(--violet));
+  color: #fff;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin: 0;
 }
 
 /* =====================
@@ -20,7 +36,7 @@ header {
   gap: 20px;
   padding: 18px 36px;
   background: #2E294E;
-  color: #fff;
+  color: var(--light-rose);
 }
 
 .logo {
@@ -135,21 +151,35 @@ nav {
 /* =====================
    Hauptbereich + Footer
 ===================== */
-main {
+/*main {
   padding: 2rem;
   max-width: 1000px;
   margin: auto;
+}*/
+
+main {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
 }
 
 section {
   margin-bottom: 2rem;
 }
 
-footer {
+/*footer {
   background-color: #e0e0e0;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+}*/
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--light-rose);
+  font-size: 0.9rem;
+  background: var(--dark-blue);
 }
 
 /* =====================
@@ -204,6 +234,87 @@ footer {
   font-size: 0.9rem;
   color: #555;
   margin: 0.2rem 0;
+}
+
+/* === Seitenkopf bei WichtigeDokumente === */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-size: 2.4rem;
+  color: var(--light-rose);
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: var(--rose);
+  font-size: 1.1rem;
+}
+
+/* === Kategorien === */
+.file-category {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.file-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.file-category h2 {
+  color: var(--light-rose);
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--purple);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.file-category p {
+  color: var(--rose);
+  margin-bottom: 1rem;
+}
+
+/* === Link-Liste Wichtige Dokumente === */
+.file-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-links li {
+  margin: 0.6rem 0;
+}
+
+.file-links a {
+  text-decoration: none;
+  color: var(--light-rose);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.file-links a:hover {
+  background: var(--purple);
+  color: #fff;
+  transform: translateX(4px);
+}
+
+/* === Animation beim Laden Wichtige Dokumente === */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 
