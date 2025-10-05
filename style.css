@@ -587,7 +587,96 @@ footer {
   }
 }
 
+/* =========================================
+   Schwarzes Brett – Accordion Stil
+========================================= */
 
+#aktuellesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* === Kategorie-Buttons === */
+.accordion {
+  background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  color: var(--light-rose);
+  cursor: pointer;
+  padding: 1rem 1.4rem;
+  border: none;
+  border-radius: 14px;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+  outline: none;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  backdrop-filter: blur(4px);
+}
+
+.accordion:hover {
+  background: rgba(144, 85, 162, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.accordion.active {
+  background: rgba(212, 153, 185, 0.25);
+  color: #fff;
+}
+
+/* === Panel (ausklappbarer Bereich) === */
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.3s ease;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 14px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-top: 0.3rem;
+  padding: 0 1rem;
+}
+
+.panel.show {
+  max-height: 1500px; /* groß genug für alle Inhalte */
+  padding: 1.2rem 1.4rem;
+}
+
+/* === Einträge innerhalb der Panels === */
+.entry {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1.1rem 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.entry:hover {
+  transform: translateY(-3px);
+  background: rgba(144, 85, 162, 0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.entry-title {
+  color: var(--light-rose);
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.3rem;
+}
+
+.entry p,
+.entry div {
+  color: #f3e8f5;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* === Sanfter Einblend-Effekt === */
+.panel.show .entry {
+  animation: fadeIn 0.4s ease-in-out;
+}
 
 
 /* =========================================

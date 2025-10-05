@@ -54,9 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".accordion").forEach(btn => {
       btn.addEventListener("click", () => {
         const panel = btn.nextElementSibling;
+        btn.classList.toggle("active");
         panel.classList.toggle("show");
       });
     });
+
     
     
   }

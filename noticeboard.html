@@ -1,37 +1,24 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Schwarzes Brett – Institutsgruppe</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <header class="site-header">
-    <img src="assets/logo.png" alt="Logo" class="logo" />
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Start</a></li>
-        <li><a href="noticeboard.html" class="active">Schwarzes Brett</a></li>
-        <li><a href="events.html">Veranstaltungen</a></li>
-        <li><a href="importantfiles.html">Wichtige Dokumente</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="fade-in">
-    <section>
+<main class="fade-in">
+  <section class="noticeboard-section">
+    <div class="page-header">
       <h1>Schwarzes Brett</h1>
-      <div id="aktuellesContainer">
-    <!-- Inhalte werden hier per JS eingefügt -->
-      </div>
-    </section>
-  </main>
+      <p>Aktuelle Aushänge, Mitteilungen und Informationen für Studierende</p>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Institutsgruppe Psychologie</p>
-  </footer>
-</body>
-</html>
+    <div id="aktuellesContainer" class="noticeboard-grid">
+      <!-- Dynamische Inhalte per JS -->
+      <!-- Beispielkarten, falls du statisch etwas zeigen willst: -->
+      <div class="notice-card">
+        <h2>Raumänderung: Statistik-Vorlesung</h2>
+        <p class="notice-date">05. Oktober 2025</p>
+        <p>Die Vorlesung „Statistik II“ findet ab kommender Woche im Hörsaal 3 statt (statt Hörsaal 2).</p>
+      </div>
+
+      <div class="notice-card">
+        <h2>Neue Sprechzeiten der Studienberatung</h2>
+        <p class="notice-date">02. Oktober 2025</p>
+        <p>Die Studienberatung bietet ab sofort mittwochs von 10–12 Uhr Sprechstunden im Raum 104 an.</p>
+      </div>
+    </div>
+  </section>
+</main>
