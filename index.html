@@ -3,45 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Startseite – Institutsgruppe</title>
+  <title>Startseite – Institutsgruppe Psychologie Halle</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1e5b7b0a7a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <!-- Header -->
-  <header>
-    <img src="assets/logo.png" alt="Logo der Institutsgruppe" class="logo" />
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Start</a></li>
-        <li><a href="noticeboard.html">Schwarzes Brett</a></li>
-        <li><a href="events.html">Veranstaltungen</a></li>
-        <li><a href="importantfiles.html">Wichtige Dokumente</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="header-content">
+      <img src="assets/logo.png" alt="Logo der Institutsgruppe" class="logo" />
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Start</a></li>
+          <li><a href="noticeboard.html">Schwarzes Brett</a></li>
+          <li><a href="events.html">Veranstaltungen</a></li>
+          <li><a href="importantfiles.html">Wichtige Dokumente</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Hauptbereich -->
   <main class="fade-in">
-    <section>
-      <h1>Willkommen bei der Institutsgruppe Psychologie Halle</h1>
-      <p>
-        Wir sind die studentische Interessenvertreung 
-        aller Psychologiestudierenden des Instituts der 
-        Martin-Luther-Universität Halle-Wittenberg.<br>
-        Hier erfährst du alles über unsere Arbeit, 
-        aktuelle Veranstaltungen und Kontaktmöglichkeiten und 
-        hast Zugriff auf unser <a href="noticeboard.html">Schwarzes Brett</a>, 
-        das wir für euch stets aktuell halten.
-      </p>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Willkommen bei der Institutsgruppe Psychologie Halle</h1>
+        <p>
+          Wir sind die studentische Interessenvertretung 
+          aller Psychologiestudierenden am Institut der 
+          Martin-Luther-Universität Halle-Wittenberg.<br><br>
+          Hier erfährst du alles über unsere Arbeit, 
+          aktuelle Veranstaltungen und Kontaktmöglichkeiten – 
+          und hast Zugriff auf unser 
+          <a href="noticeboard.html">Schwarzes Brett</a>, 
+          das wir für euch stets aktuell halten.
+        </p>
+      </div>
+
+      <div class="hero-image">
+        <img src="assets/gruppenbild1.JPG" alt="Institutsgruppe Gruppenfoto" class="group_photo" />
+      </div>
     </section>
-    <img src="assets/gruppenbild1.JPG" alt="Institutsgruppe Gruppenfoto" class="group_photo" />
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Institutsgruppe Psychologie</p>
+    <p>&copy; 2025 Institutsgruppe Psychologie Halle – Alle Rechte vorbehalten</p>
   </footer>
 </body>
 </html>
+
