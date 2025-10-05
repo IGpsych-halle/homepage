@@ -367,7 +367,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 1.5rem;
 
   max-width: 1100px;
   margin: 3rem auto;
@@ -440,7 +440,7 @@ footer {
     align-items: center;
     text-align: center;
 
-    gap: 1.2rem; /* angenehmer Abstand zwischen Text und Bild */
+    gap: 0rem; /* angenehmer Abstand zwischen Text und Bild */
     padding: 2rem 1.2rem;
     margin: 2rem 1rem;
   }
