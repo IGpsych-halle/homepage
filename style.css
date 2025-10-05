@@ -454,6 +454,39 @@ footer {
   }
 }
 
+/* ===================== Mobile / Tablet ===================== */
+@media (max-width: 820px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem; /* horizontales Padding für Handys */
+  }
+
+  .hero-text {
+    order: 1;
+    width: 100%;
+  }
+
+  .hero-image {
+    order: 2;
+    width: 100%;
+    margin-top: 1.5rem; /* Abstand zwischen Text und Bild */
+  }
+
+  .group_photo {
+    max-width: 90%;
+    border-radius: 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem; /* etwas kleiner auf Mobile */
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
 /* === Events Timeline === */
 .events-section {
   padding: 40px 10% 80px; /* oben weniger, unten bleibt großzügig */
