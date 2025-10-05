@@ -434,7 +434,7 @@ footer {
     align-items: center; /* zentriert Text & Bild */
     text-align: center;
     padding: 2rem 1rem;
-    gap: 0.5rem; /* Abstand zwischen Text und Bild deutlich kleiner */
+    gap: 0.0rem; /* Abstand zwischen Text und Bild deutlich kleiner */
   }
 
   .hero-text {
@@ -458,7 +458,7 @@ footer {
 
   .hero-text h1 {
     font-size: 2rem;
-    margin-bottom: 0.5rem; /* kleiner Abstand nach unten */
+    margin-bottom: 1.5rem; /* kleiner Abstand nach unten */
   }
 
   .hero-text p {
