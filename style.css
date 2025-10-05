@@ -275,8 +275,8 @@ footer {
 }
 
 .team-card p {
-  overflow-wrap: anywhere; /* erlaubt Brüche an jedem „sinnvollen Punkt“ */
-  word-break: break-word;  /* für sehr lange E-Mails */
+  overflow-wrap: anywhere;    /* bricht an Stellen, wo es nötig ist */
+  word-break: normal;         /* verhindert Brüche mitten im Wort */
   white-space: normal;
 }
 
