@@ -457,6 +457,7 @@ footer {
   .hero-text p {
     font-size: 1rem;
     line-height: 1.6;
+    margin-bottom: 1.5rem;
   }
 
   .hero-image {
@@ -488,7 +489,7 @@ footer {
   }
   
   .hero {
-    margin: 0.5rem;
+    margin: 1.5rem;
     padding: 1rem;
     width: calc(100% - 1rem); /* 100% minus margins */
   }
