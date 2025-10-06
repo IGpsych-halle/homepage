@@ -247,7 +247,7 @@ footer {
   border-bottom: 2px solid var(--purple);
   padding-bottom: 0.5rem;
   text-align: center;
-  letter-spacing: 1px;
+  /*letter-spacing: 1px;*/
 }
 
 .team-section p {
