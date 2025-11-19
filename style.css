@@ -16,7 +16,7 @@
    Globales Layout
 ========================================= */
 body {
-  background: linear-gradient(90deg, #fe6b93, #ececec);
+  background: linear-gradient(135deg, #aa1945, #d52056);
   color: var(--text-light);
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
@@ -39,7 +39,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 14px 48px;
-  background: var(--dark-blue);
+  background: #ececec;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(6px);
