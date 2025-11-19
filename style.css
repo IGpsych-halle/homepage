@@ -6,11 +6,12 @@
     --pink: #fe6b93;
     --icewhite: #ececec;
     --gold: #dfae23;
+    --dark-amaranth: #74112f;
 
     --dark-blue: var(--magenta);
     --violet: var(--gold);
     --purple: var(--pink);
-    --rose: var(--icewhite);
+    --rose: var(--dark-amaranth);
     --light-rose: var(--icewhite);
 
   --text-light: #fff;
@@ -399,7 +400,6 @@ footer {
   text-align: center;
   font-size: 2.2rem;
   color: var(--gold);
-  background-color: var(--magenta);
   margin-bottom: 1rem;
 }
 
