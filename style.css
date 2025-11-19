@@ -398,7 +398,7 @@ footer {
 }
 
 .hero-text p {
-  color: var(--purple);
+  color: #ececec;
   line-height: 1.7;
   font-size: 1.1rem;
   margin-bottom: 0; /* kein unnötiger extra Abstand */
@@ -784,6 +784,10 @@ footer {
 .entry .attachment-link:hover {
   background-color: #d499b9; /* Hover-Farbe passend zu .accordion.active */
   transform: translateY(-2px);
+}
+
+.hamburger {
+  display: none;
 }
 
 /* ================= Mobile Navigation ================= */
