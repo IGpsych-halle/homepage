@@ -16,7 +16,7 @@
    Globales Layout
 ========================================= */
 body {
-  background: linear-gradient(135deg, #aa1945, #d52056);
+  background: linear-gradient(135deg, #c7315e, #770829);
   color: var(--text-light);
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
@@ -135,9 +135,9 @@ section {
 footer {
   text-align: center;
   padding: 2rem;
-  color: var(--light-rose);
+  color: #ececec;
   font-size: 0.9rem;
-  background: var(--dark-blue);
+  background: var(--light-rose);
 }
 
 /* =========================================
