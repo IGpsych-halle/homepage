@@ -398,12 +398,13 @@ footer {
   margin-top: 0; /* entfernt Standardabstand */
   text-align: center;
   font-size: 2.2rem;
-  color: var(--light-rose);
+  color: var(--gold);
+  background-color: var(--magenta);
   margin-bottom: 1rem;
 }
 
 .hero-text p {
-  color: var(--rose);
+  color: var(--pink);
   line-height: 1.7;
   font-size: 1.1rem;
   margin-bottom: 0; /* kein unnötiger extra Abstand */
