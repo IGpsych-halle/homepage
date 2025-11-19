@@ -135,9 +135,9 @@ section {
 footer {
   text-align: center;
   padding: 2rem;
-  color: #ececec;
+  color: var(--light-rose);
   font-size: 0.9rem;
-  background: var(--light-rose);
+  background: var(--dark-blue);
 }
 
 /* =========================================
@@ -369,6 +369,7 @@ footer {
 /* ===================== Hero Section ===================== */
 .hero {
   display: flex;
+  background: #fe6b93;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
