@@ -8,6 +8,11 @@
   --rose: #D499B9;
   --light-rose: #E8C1C5;
 
+  --magenta: #aa1945
+  --pink: #fe6b93
+  --icewhite: #ececec
+  --gold: #dfae23
+
   --text-light: #fff;
   --text-muted: #E8C1C5;
 }
@@ -16,7 +21,7 @@
    Globales Layout
 ========================================= */
 body {
-  background: linear-gradient(135deg, var(--dark-blue), var(--violet));
+  background: linear-gradient(135deg, var(--magenta), var(--pink));
   color: var(--text-light);
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
