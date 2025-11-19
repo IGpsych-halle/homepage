@@ -1,24 +1,14 @@
 /* =========================================
-   Neue Farbpalette (komplett ersetzt)
+   Farbpalette
 ========================================= */
 :root {
-  --pink: #fe6b93;
   --magenta: #aa1945;
+  --pink: #fe6b93;
   --icewhite: #ececec;
   --gold: #dfae23;
 
-  /* abgeleitete harmonische Varianten */
-  --pink-light: #ff86a9;
-  --pink-dark: #d25678;
-
-  --magenta-light: #c7365e;
-  --magenta-dark: #7c1235;
-
-  --gold-soft: #f4c94a;
-  --gold-dark: #b58a1d;
-
-  --text-light: var(--icewhite);
-  --text-muted: var(--pink-light);
+  --text-light: #fff;
+  --text-muted: var(--pink);
 }
 
 /* =========================================
@@ -26,15 +16,16 @@
 ========================================= */
 body {
   background: linear-gradient(135deg, var(--magenta), var(--pink));
-  color: var(--icewhite);
+  color: var(--text-light);
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
   line-height: 1.6;
+  height: auto;
   min-height: 100vh;
 }
 
 /* =========================================
-   HEADER + NAVIGATION
+   HEADER + NAVIGATION (Banner)
 ========================================= */
 header {
   position: sticky;
@@ -44,7 +35,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 14px 48px;
-  background: linear-gradient(90deg, var(--magenta-dark), var(--magenta));
+  background: linear-gradient(90deg, var(--pink), var(--gold));
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(6px);
@@ -52,13 +43,31 @@ header {
 
 .logo {
   height: 85px;
+  width: auto;
+  object-fit: contain;
   flex-shrink: 0;
 }
 
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
 .nav-links a {
+  display: inline-block;
   padding: 10px 16px;
   border-radius: 10px;
-  color: var(--icewhite);
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
@@ -67,118 +76,162 @@ header {
 
 .nav-links a:hover {
   transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--gold-soft);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--icewhite);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .nav-links a.active {
   background: rgba(255, 255, 255, 0.18);
-  color: var(--gold-soft);
+  color: var(--icewhite);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* === Responsive Anpassung === */
+@media (max-width: 820px) {
+  header {
+    flex-direction: column;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+
 /* =========================================
-   Footer
+   Hauptbereich + Footer
 ========================================= */
+main {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
 footer {
   text-align: center;
   padding: 2rem;
-  color: var(--gold-soft);
+  color: var(--icewhite);
   font-size: 0.9rem;
-  background: var(--magenta-dark);
+  background: var(--magenta);
 }
 
 /* =========================================
    Wichtige Dokumente
 ========================================= */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
 .page-header h1 {
   font-size: 2.4rem;
-  color: var(--gold);
+  color: var(--icewhite);
+  margin-bottom: 0.5rem;
 }
-
 .page-header p {
-  color: var(--pink-light);
+  color: var(--pink);
+  font-size: 1.1rem;
 }
 
 .file-category {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   padding: 2rem;
+  margin-bottom: 2rem;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
+.file-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 .file-category h2 {
-  color: var(--gold);
-  border-bottom: 2px solid var(--magenta-light);
+  color: var(--icewhite);
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
-
 .file-category p {
-  color: var(--pink-light);
+  color: var(--pink);
 }
 
+/* === Link-Liste === */
 .file-links a {
   color: var(--icewhite);
   background: rgba(255, 255, 255, 0.1);
 }
-
 .file-links a:hover {
-  background: var(--pink-dark);
-  color: var(--icewhite);
+  background: var(--gold);
+  color: #fff;
 }
 
 /* =========================================
-   Kontakt / Team Cards
+   Kontakt
 ========================================= */
-.team-section {
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 20px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-}
-
 .team-section h2 {
-  color: var(--gold);
-  border-bottom: 2px solid var(--magenta);
+  color: var(--icewhite);
+  border-bottom: 2px solid var(--gold);
 }
 
 .team-section p {
-  color: var(--pink-light);
-}
-
-.team-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--pink);
 }
 
 .team-card:hover {
-  background: rgba(170, 25, 69, 0.25); /* transparentes Magenta */
+  background: rgba(254,107,147,0.25);
 }
 
 .team-card img {
-  border: 3px solid rgba(254, 107, 147, 0.4);
+  border: 3px solid rgba(254,107,147,0.4);
 }
 
 .team-card:hover img {
-  border-color: var(--gold);
+  border-color: var(--icewhite);
 }
 
 .team-card h3 {
-  color: var(--gold-soft);
+  color: var(--icewhite);
+}
+
+.team-card .contact a:hover {
+  color: var(--gold);
+}
+
+/* Kontakt Info */
+.contact-info h2 {
+  color: var(--icewhite);
 }
 
 /* =========================================
    Hero Section
 ========================================= */
-.hero {
-  background: rgba(255, 255, 255, 0.05);
-}
-
 .hero-text h1 {
-  color: var(--gold);
+  color: var(--icewhite);
 }
 
 .hero-text p {
-  color: var(--pink-light);
+  color: var(--pink);
 }
 
 .hero-text a:hover {
@@ -186,80 +239,62 @@ footer {
 }
 
 .group_photo {
-  border: 3px solid rgba(254, 107, 147, 0.4);
+  border: 3px solid rgba(254,107,147,0.4);
 }
 
 /* =========================================
    Events Timeline
 ========================================= */
 .events-section {
-  background: linear-gradient(
-    180deg,
-    var(--magenta-dark),
-    var(--magenta)
-  );
-  color: var(--icewhite);
+  background: linear-gradient(180deg, var(--magenta) 0%, var(--pink) 100%);
 }
 
 .events-section h1 {
-  color: var(--gold);
-}
-
-.events-section .intro {
-  color: var(--pink-light);
+  color: var(--icewhite);
 }
 
 .timeline::before {
-  background: linear-gradient(to bottom, transparent, var(--pink-light), transparent);
-}
-
-.event-content {
-  background: rgba(255, 255, 255, 0.08);
+  background: linear-gradient(to bottom, transparent, var(--pink), transparent);
 }
 
 .event-content h2 {
-  color: var(--gold);
+  color: var(--icewhite);
 }
 
 .event-content .date {
-  color: var(--pink-light);
+  color: var(--pink);
 }
 
 .event-image img {
-  border: 3px solid rgba(254, 107, 147, 0.4);
+  border: 3px solid rgba(254,107,147,0.4);
 }
 
 /* =========================================
    Schwarzes Brett – Accordion
 ========================================= */
 .accordion {
-  background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
-  color: var(--gold);
-}
-
-.accordion:hover {
-  background: rgba(170, 25, 69, 0.25);
-}
-
-.accordion.active {
-  background: rgba(254, 107, 147, 0.25);
   color: var(--icewhite);
 }
 
-.entry {
-  background: rgba(255, 255, 255, 0.06);
+.accordion:hover {
+  background: rgba(254,107,147,0.25);
 }
 
-.entry:hover {
-  background: rgba(170, 25, 69, 0.25);
+.accordion.active {
+  background: rgba(254,107,147,0.25);
+  color: #fff;
 }
 
 .entry-title {
-  color: var(--gold);
+  color: var(--icewhite);
+}
+
+.entry:hover {
+  background: rgba(254,107,147,0.25);
 }
 
 .entry .attachment-link {
-  background-color: var(--magenta-light);
+  background-color: var(--gold);
 }
 
 .entry .attachment-link:hover {
@@ -270,14 +305,14 @@ footer {
    Mobile Navigation
 ========================================= */
 .hamburger span {
-  background-color: var(--gold);
+  background-color: var(--icewhite);
 }
 
 .nav-menu {
-  background: rgba(170, 25, 69, 0.95);
+  background: rgba(254,107,147,0.95);
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: var(--gold);
+  color: var(--pink);
 }
