@@ -39,7 +39,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 14px 48px;
-  background: #ececec;
+  background: var(--light-rose);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(6px);
@@ -71,7 +71,7 @@ nav {
   display: inline-block;
   padding: 10px 16px;
   border-radius: 10px;
-  color: var(--light-rose);
+  color: #ececec;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
@@ -81,7 +81,7 @@ nav {
 .nav-links a:hover {
   transform: translateY(-3px);
   background: rgba(255, 255, 255, 0.1);
-  color: var(--rose);
+  color: #e8c1e5;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
