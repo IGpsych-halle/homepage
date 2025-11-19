@@ -16,7 +16,7 @@
    Globales Layout
 ========================================= */
 body {
-  background: linear-gradient(135deg, var(--dark-blue), var(--violet));
+  background: var(--violet);
   color: var(--text-light);
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
@@ -39,7 +39,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 14px 48px;
-  background: linear-gradient(90deg, var(--violet), var(--purple));
+  background: var(--dark-blue);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(6px);
@@ -71,7 +71,7 @@ nav {
   display: inline-block;
   padding: 10px 16px;
   border-radius: 10px;
-  color: #fff;
+  color: var(--light-rose);
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
@@ -81,13 +81,13 @@ nav {
 .nav-links a:hover {
   transform: translateY(-3px);
   background: rgba(255, 255, 255, 0.1);
-  color: var(--light-rose);
+  color: var(--rose);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .nav-links a.active {
   background: rgba(255, 255, 255, 0.18);
-  color: var(--light-rose);
+  color: var(--rose);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -398,7 +398,7 @@ footer {
 }
 
 .hero-text p {
-  color: var(--rose);
+  color: var(--purple);
   line-height: 1.7;
   font-size: 1.1rem;
   margin-bottom: 0; /* kein unnötiger extra Abstand */
