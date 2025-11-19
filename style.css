@@ -81,13 +81,13 @@ nav {
 .nav-links a:hover {
   transform: translateY(-3px);
   background: rgba(255, 255, 255, 0.1);
-  color: #e8c1e5;
+  color: #fff;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .nav-links a.active {
   background: rgba(255, 255, 255, 0.18);
-  color: var(--rose);
+  color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
