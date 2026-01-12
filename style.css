@@ -771,8 +771,8 @@ footer {
   display: inline-block;
   margin-top: 0.6rem;
   padding: 5px 10px;
-  background-color: #9124a2; /* passt zu deinem Farbkonzept */
-  color: #fff;
+  background-color: var(--gold); /* passt zu deinem Farbkonzept */
+  color: var(--icewhite);
   text-decoration: none;
   border-radius: 8px;
   font-size: 0.95rem;
@@ -781,7 +781,7 @@ footer {
 }
 
 .entry .attachment-link:hover {
-  background-color: #d499b9; /* Hover-Farbe passend zu .accordion.active */
+  background-color: var(--iceyellow); /* Hover-Farbe passend zu .accordion.active */
   transform: translateY(-2px);
 }
 
