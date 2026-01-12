@@ -36,7 +36,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 48px;
+
+  padding: 22px 48px; /* ⬅ größer = dein gewünschter Look */
   background: var(--gold);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid rgba(255, 255, 255, 0.08);
