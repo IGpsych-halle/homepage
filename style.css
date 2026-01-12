@@ -2,13 +2,11 @@
    Farbpalette
 ========================================= */
 :root {
-  --dark-blue: #aa1945;
-  --violet: #ececec;
-  --purple: #74112f;
-  --rose: #E6CD88;
-  --light-rose: #DFAE23;
-
-  --text-light: #ececec;
+  --redbrown: #aa1945;
+  --icewhite: #ececec;
+  --brown: #74112f;
+  --iceyellow: #E6CD88;
+  --gold: #DFAE23;
   --text-muted: #E8C1C5;
 }
 
@@ -17,7 +15,7 @@
 ========================================= */
 body {
   background: linear-gradient(135deg, #c7315e, #770829);
-  color: var(--text-light);
+  color: var(--icewhite);
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
   line-height: 1.6;
@@ -39,7 +37,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 14px 48px;
-  background: var(--light-rose);
+  background: var(--gold);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(6px);
@@ -135,9 +133,9 @@ section {
 footer {
   text-align: center;
   padding: 2rem;
-  color: var(--light-rose);
+  color: var(--gold);
   font-size: 0.9rem;
-  background: var(--dark-blue);
+  background: var(--redbrown);
 }
 
 /* =========================================
@@ -149,11 +147,11 @@ footer {
 }
 .page-header h1 {
   font-size: 2.4rem;
-  color: var(--light-rose);
+  color: var(--gold);
   margin-bottom: 0.5rem;
 }
 .page-header p {
-  color: var(--rose);
+  color: var(--iceyellow);
   font-size: 1.1rem;
 }
 
@@ -170,14 +168,14 @@ footer {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 .file-category h2 {
-  color: var(--light-rose);
+  color: var(--gold);
   font-size: 1.8rem;
-  border-bottom: 2px solid var(--purple);
+  border-bottom: 2px solid var(--brown);
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
 .file-category p {
-  color: var(--rose);
+  color: var(--iceyellow);
   margin-bottom: 1rem;
 }
 
@@ -192,7 +190,7 @@ footer {
 }
 .file-links a {
   text-decoration: none;
-  color: var(--light-rose);
+  color: var(--gold);
   background: rgba(255, 255, 255, 0.1);
   padding: 0.6rem 1rem;
   border-radius: 8px;
@@ -200,7 +198,7 @@ footer {
   transition: background 0.2s ease, transform 0.2s ease;
 }
 .file-links a:hover {
-  background: var(--purple);
+  background: var(--brown);
   color: #fff;
   transform: translateX(4px);
 }
@@ -242,9 +240,9 @@ footer {
 
 .team-section h2 {
   font-size: 2rem;
-  color: var(--light-rose);
+  color: var(--gold);
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--purple);
+  border-bottom: 2px solid var(--brown);
   padding-bottom: 0.5rem;
   text-align: center;
   letter-spacing: 1px;
@@ -255,7 +253,7 @@ footer {
 
 .team-section p {
   text-align: center;
-  color: var(--rose);
+  color: var(--iceyellow);
   font-size: 1.1rem;
   margin-bottom: 2.5rem;
 }
@@ -304,13 +302,13 @@ footer {
 
 .team-card:hover img {
   transform: scale(1.06);
-  border-color: var(--light-rose);
+  border-color: var(--gold);
 }
 
 /* Namen + Rollen */
 .team-card h3 {
   font-size: 1.25rem;
-  color: var(--light-rose);
+  color: var(--gold);
   margin: 0.4rem 0;
 }
 
@@ -321,7 +319,7 @@ footer {
 
 
 .team-card .contact a:hover {
-  color: var(--purple);
+  color: var(--brown);
   transform: scale(1.15);
 }
 
@@ -336,7 +334,7 @@ footer {
 }
 
 .contact-info h2 {
-  color: var(--light-rose);
+  color: var(--gold);
   margin: 0 0 0.8rem 0; /* oben = 0, unten = 0.8rem */
 }
 
@@ -394,7 +392,7 @@ footer {
   margin-top: 0; /* entfernt Standardabstand */
   text-align: center;
   font-size: 2.2rem;
-  color: var(--light-rose);
+  color: var(--gold);
   margin-bottom: 1rem;
 }
 
@@ -406,14 +404,14 @@ footer {
 }
 
 .hero-text a {
-  color: var(--light-rose);
+  color: var(--gold);
   text-decoration: underline;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
 .hero-text a:hover {
-  color: var(--purple);
+  color: var(--brown);
 }
 
 /* ---------- Gruppenfoto ---------- */
@@ -509,7 +507,7 @@ footer {
 /* === Events Timeline === */
 .events-section {
   padding: 40px clamp(1rem, 6vw, 5rem) 80px;
-  background: linear-gradient(180deg, var(--navy) 0%, var(--violet) 100%);
+  background: linear-gradient(180deg, var(--navy) 0%, var(--icewhite) 100%);
   color: white;
 }
 
@@ -517,7 +515,7 @@ footer {
   margin-top: 0; /* entfernt Standardabstand */
   text-align: center;
   font-size: 2.2rem;
-  color: var(--light-rose);
+  color: var(--gold);
   margin-bottom: 1rem;
 }
 
@@ -547,7 +545,7 @@ footer {
   left: 50%;
   width: 3px;
   height: calc(100% - 120px);
-  background: linear-gradient(to bottom, transparent, var(--rose), transparent);
+  background: linear-gradient(to bottom, transparent, var(--iceyellow), transparent);
   transform: translateX(-50%);
   opacity: 0.15;
   z-index: 0;
@@ -591,14 +589,14 @@ footer {
 }
 
 .event-content h2 {
-  color: var(--light-rose);
+  color: var(--gold);
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
 }
 
 .event-content .date {
   font-weight: 700;
-  color: var(--rose);
+  color: var(--iceyellow);
   margin-bottom: 1rem;
 }
 
@@ -678,7 +676,7 @@ footer {
 /* === Kategorie-Buttons === */
 .accordion {
   background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
-  color: var(--light-rose);
+  color: var(--gold);
   cursor: pointer;
   padding: 1rem 1.4rem;
   border: none;
@@ -740,7 +738,7 @@ footer {
 }
 
 .entry-title {
-  color: var(--light-rose);
+  color: var(--gold);
   font-size: 1.2rem;
   margin-bottom: 0.4rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -811,7 +809,7 @@ footer {
   .hamburger span {
     width: 100%;
     height: 3px;
-    background-color: var(--light-rose);
+    background-color: var(--gold);
     border-radius: 2px;
     transition: all 0.3s ease;
   }
@@ -865,7 +863,7 @@ footer {
 
   .nav-links li a:hover,
   .nav-links li a.active {
-    color: var(--rose);
+    color: var(--iceyellow);
   }
 }
 
