@@ -44,10 +44,19 @@ header {
 }
 
 .logo {
-  height: 85px;
+  height: 95px; /* bewusst größer */
   width: auto;
   object-fit: contain;
   flex-shrink: 0;
+
+  transform: scale(1.15);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.logo:hover {
+  transform: scale(1.22);
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.35));
 }
 
 nav {
@@ -935,24 +944,6 @@ a:active {
   }
 }
 
-/* ============================
-   LOGO MODERN & PRÄSENTER
-============================ */
-.enhanced-logo {
-  position: relative;
-}
-
-.floating-logo {
-  position: relative;
-  transform: scale(1.15);     /* etwas größer */
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
-  transition: transform 0.25s ease, filter 0.25s ease;
-}
-
-.floating-logo:hover {
-  transform: scale(1.22);
-  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.35));
-}
 
 /* ============================
    GROßES, PRÄSENTES GRUPPENFOTO
