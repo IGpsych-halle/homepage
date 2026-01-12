@@ -138,6 +138,31 @@ footer {
   background: var(--redbrown);
 }
 
+/* Globale Link-Styles */
+a {
+  color: var(--gold);              /* gut lesbares Blau */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+/* Hover & Fokus (auch für Tastaturnavigation wichtig) */
+a:hover,
+a:focus {
+  color: var(--iceyellow);
+}
+
+/* Bereits besuchte Links */
+a:visited {
+  color: var(--icewhite);
+}
+
+/* Aktiver Klick */
+a:active {
+  color: var(--icewhite);
+}
+
+
 /* =========================================
    Wichtige Dokumente
 ========================================= */
