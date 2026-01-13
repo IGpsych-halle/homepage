@@ -10,7 +10,7 @@
 
 /* ========================================= Globales Layout ========================================= */
 body {
-    background: var(--icewhite);
+    background: linear-gradient(--redbrown, --brown);
     color: var(--icewhite);
     font-family: 'Inter', 'Segoe UI', sans-serif;
     margin: 0;
