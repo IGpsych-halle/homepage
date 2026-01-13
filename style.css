@@ -13,9 +13,13 @@
 /* =========================================
    Globales Layout
 ========================================= */
+
+html {
+  background-color: var(--icewhite); /* echter Seitenhintergrund */
+}
+
 body {
-  background: var(--icewhite);
-  color: var(--icewhite);
+  background: var(--redbrown);
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
   line-height: 1.6;
