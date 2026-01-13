@@ -14,7 +14,7 @@
    Globales Layout
 ========================================= */
 body {
-  background: linear-gradient(135deg, #c7315e, #770829);
+  background: var(--icewhite);
   color: var(--icewhite);
   font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
