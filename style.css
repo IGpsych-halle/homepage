@@ -980,7 +980,7 @@ html {
 }
 
 body {
-  background: transparent;
+  background: var(--color-surface);
   color: var(--text-primary);
 }
 
@@ -997,7 +997,7 @@ section,
 .event-content,
 .team-card,
 .accordion {
-  background-color: var(--color-surface);
+  background-color: var(--brown);
 }
 
 /* Elevated / Hover */
