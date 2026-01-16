@@ -869,6 +869,7 @@ a:focus {
 /* ===== Hamburger Button ===== */
 @media (max-width: 768px) {
     .hamburger {
+        color: white;
         display: flex;
         margin: 0.5rem auto 0;
         /* zentriert unter Logo */
@@ -910,7 +911,7 @@ a:focus {
         width: 90%;
         margin: 0.5rem auto 1rem;
         /* zentriert, direkt unter Hamburger */
-        background: white;
+        color: white;
         border-radius: 14px;
         padding: 1rem 0;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
