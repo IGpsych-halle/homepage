@@ -642,6 +642,7 @@ a:active {
 
 /* Textinhalt */
 .event-content {
+    color: var(--redbrown);
     flex: 1;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 16px;
@@ -790,6 +791,7 @@ a:active {
 
 /* === Einträge innerhalb der Panels === */
 .entry {
+    color: var(--redbrown);
     background: rgba(255, 255, 255, 0.06);
     border-radius: 12px;
     padding: 1.1rem 1rem;
