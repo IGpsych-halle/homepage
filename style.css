@@ -766,8 +766,8 @@ a:active {
 }
 
 .accordion.active {
-    background: rgba(212, 153, 185, 0.25);
-    color: var(--icewhite);
+    background: var(--iceyellow);
+    color: var(--gold);
 }
 
 /* === Panel (ausklappbarer Bereich) === */
@@ -928,7 +928,7 @@ a:active {
         padding: 0;
         list-style: none;
     }
-
+    .nav-links li a:visited,
     .nav-links li a {
         color: #fff;
         font-size: 1rem;
