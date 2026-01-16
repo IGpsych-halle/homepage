@@ -372,7 +372,6 @@ footer {
 /* ===================== Hero Section ===================== */
 .hero {
     display: flex;
-    background: #fe6b93;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -432,7 +431,7 @@ footer {
     max-width: 560px;
     border-radius: 18px;
     object-fit: cover;
-    border: 3px solid rgba(212, 153, 185, 0.4);
+    border: 3px solid var(--icewhite);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -477,30 +476,6 @@ footer {
         display: none;
         width: 100%;
         border-radius: 16px;
-    }
-
-    /* ============================ GROßES, PRÄSENTES GRUPPENFOTO ============================ */
-    .hero-expanded {
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .hero-image-big {
-        flex: 1 1 600px;
-        /* Foto dominant */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .group_photo_large {
-        max-width: 100%;
-        transform: scale(0.8);
-        border-radius: 22px;
-        border: 4px solid rgba(170, 25, 69, 0.45);
-        /* magenta outline */
-        box-shadow: 0 14px 26px rgba(0, 0, 0, 0.28);
-        transition: transform 0.4s ease, box-shadow 0.3s ease;
     }
 
     /* Mobile bleibt wie bei dir */
@@ -836,7 +811,6 @@ footer {
     transform: translateY(-2px);
 }
 
-/* Globale Link-Styles */
 .entry a {
     color: var(--gold);
     /* gut lesbares Blau */
