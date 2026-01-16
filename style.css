@@ -368,7 +368,7 @@ a:active {
 
 .contact-info p,
 .contact-info a {
-    color: #f3e8f5;
+    color: var(--redbrown);
     font-size: 1rem;
     margin: 0.3rem 0;
     /* etwas enger */
