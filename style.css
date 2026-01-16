@@ -229,7 +229,7 @@ a:active {
 }
 
 .file-links a:hover {
-    background: var(--redbrown);
+    background: var(--iceyellow);
     color: var(--icewhite);
     transform: translateX(4px);
 }
@@ -760,14 +760,14 @@ a:active {
 }
 
 .accordion:hover {
-    background: var(--redbrown);
+    background: var(--iceyellow);
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
 .accordion.active {
     background: rgba(212, 153, 185, 0.25);
-    color: #fff;
+    color: var(--icewhite);
 }
 
 /* === Panel (ausklappbarer Bereich) === */
@@ -802,7 +802,7 @@ a:active {
 
 .entry:hover {
     transform: translateY(-3px);
-    background: var(--redbrown);
+    background: var(--iceyellow);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
