@@ -721,7 +721,7 @@ footer {
 
 /* === Kategorie-Buttons === */
 .accordion {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+    background: var(--icewhite);
     color: var(--gold);
     cursor: pointer;
     padding: 1rem 1.4rem;
@@ -737,7 +737,8 @@ footer {
 }
 
 .accordion:hover {
-    background: var(--iceyellow);
+    background: var(--icewhite);
+    color: var(--redbrown);
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
