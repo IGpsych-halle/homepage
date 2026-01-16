@@ -886,7 +886,7 @@ a:focus {
     .hamburger span {
         width: 100%;
         height: 3px;
-        background-color: var(--gold);
+        background-color: white;
         border-radius: 2px;
         transition: all 0.3s ease;
     }
@@ -910,7 +910,7 @@ a:focus {
         width: 90%;
         margin: 0.5rem auto 1rem;
         /* zentriert, direkt unter Hamburger */
-        background: rgba(144, 85, 162, 0.95);
+        background: white;
         border-radius: 14px;
         padding: 1rem 0;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
