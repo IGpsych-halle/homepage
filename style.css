@@ -554,7 +554,7 @@ footer {
 }
 
 .event-content h2 {
-    color: var(--gold);
+    color: #36363B;
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
 }
@@ -681,7 +681,7 @@ footer {
     border: 2px solid #36363B;
     border-radius: 10px;
 
-    padding: 2rem 2rem;
+    padding: 0.8rem 0.7rem;
 
     text-align: left;
 
