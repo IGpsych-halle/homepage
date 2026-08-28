@@ -37,13 +37,11 @@ header {
 }
 
 .logo {
-    height: 50px;
+    height: 60px;
     /* bewusst größer */
     width: auto;
     object-fit: contain;
     flex-shrink: 0;
-    transform: scale(1.15);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
     transition: transform 0.25s ease, filter 0.25s ease;
 }
 
@@ -280,7 +278,6 @@ footer {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #36363B;
     margin-bottom: 1rem;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
@@ -395,17 +392,10 @@ footer {
 
 .group_photo {
     width: 100%;
-    max-width: 560px;
     border-radius: 18px;
     object-fit: cover;
-    border: 3px solid var(--icewhite);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.group_photo:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
 }
 
 /* ===================== Mobile / Tablet ===================== */
