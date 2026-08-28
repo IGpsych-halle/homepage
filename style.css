@@ -557,9 +557,8 @@ footer {
 .event-content {
     color: #36363B;
     flex: 1;
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--icewhite);
     border-radius: 16px;
-    border: 2px solid black;
     padding: 32px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -598,7 +597,6 @@ footer {
     width: 100%;
     max-width: 340px;
     height: auto;
-    border: 2px solid black;
     border-radius: 16px;
     object-fit: cover;
     transition: transform 0.3s ease;
