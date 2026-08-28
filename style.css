@@ -285,7 +285,7 @@ footer {
 /* Namen + Rollen */
 .team-card h3 {
     font-size: 1.25rem;
-    color: var(--gold);
+    color: #36363B;
     margin: 0.4rem 0;
 }
 
