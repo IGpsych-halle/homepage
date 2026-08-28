@@ -664,16 +664,17 @@ footer {
 .event-card {
     display: grid;
 
-    grid-template-columns: minmax(0, 1fr) 80px minmax(0, 1fr);
-
-    align-items: center;
+    grid-template-columns:
+        minmax(0, 1fr)
+        80px
+        minmax(0, 1fr);
 
     position: relative;
     z-index: 1;
 
-    min-height: 300px;
+    align-items: center;
+    width: 100%;
 }
-
 .event-card::before {
     content: "";
 
