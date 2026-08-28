@@ -728,8 +728,9 @@ footer {
     display: inline-block;
     margin-top: 0.6rem;
     padding: 5px 10px;
-    background-color: var(--icewhite);
+    background-color: white;
     color: #36363B;
+    border: 1px solid #36363B;
     text-decoration: none;
     border-radius: 8px;
     font-size: 0.95rem;
