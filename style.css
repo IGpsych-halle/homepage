@@ -30,7 +30,7 @@ header {
     justify-content: space-between;
     padding: 15px 60px;
     
-    background: var(--gold);
+    background: var(--icewhite);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(6px);
@@ -74,11 +74,11 @@ nav {
 }
 
 .nav-links a:hover {
-    color: var(--icewhite);
+    text-decoration: underline;
 }
 
 .nav-links a.active {
-    color: var(--icewhite);
+    text-decoration: underline;
 }
 
 /* === Responsive Anpassung === */
@@ -125,7 +125,7 @@ footer {
     padding: 2rem;
     color: #36363B;
     font-size: 0.9rem;
-    background: var(--iceyellow);
+    background: var(--icewhite);
 }
 
 
