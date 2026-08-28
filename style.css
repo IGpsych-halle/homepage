@@ -412,18 +412,14 @@ footer {
 
 .hero-overlay {
     position: absolute;
-
     inset: 0;
-
     z-index: 2;
 
     display: flex;
+    align-items: flex-end;
+    justify-content: center;
 
-    align-items: center;
-
-    justify-content: flex-start;
-
-    padding: 4rem;
+    padding: 2rem;
 }
 
 
