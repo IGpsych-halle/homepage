@@ -37,7 +37,7 @@ header {
 }
 
 .logo {
-    height: 95px;
+    height: 50px;
     /* bewusst größer */
     width: auto;
     object-fit: contain;
@@ -45,11 +45,6 @@ header {
     transform: scale(1.15);
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
     transition: transform 0.25s ease, filter 0.25s ease;
-}
-
-.logo:hover {
-    transform: scale(1.22);
-    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.35));
 }
 
 nav {
@@ -153,7 +148,7 @@ footer {
 }
 
 .page-header p {
-    color: var(--iceyellow);
+    color: #36363B;
     font-size: 1.1rem;
 }
 
@@ -180,7 +175,7 @@ footer {
 }
 
 .file-category p {
-    color: var(--iceyellow);
+    color: #36363B;
     margin-bottom: 1rem;
 }
 
@@ -197,7 +192,7 @@ footer {
 
 .file-links a {
     text-decoration: none;
-    color: var(--gold);
+    color: #36363B;
     background: rgba(255, 255, 255, 0.1);
     padding: 0.6rem 1rem;
     border-radius: 8px;
@@ -206,8 +201,8 @@ footer {
 }
 
 .file-links a:hover {
-    background: var(--iceyellow);
-    color: var(--icewhite);
+    background: var(--icewhite);
+    color: #36363B;
     transform: translateX(4px);
 }
 
@@ -345,7 +340,7 @@ footer {
 
 .contact-info p,
 .contact-info a {
-    color: var(--redbrown);
+    color: #36363B;
     font-size: 1rem;
     margin: 0.3rem 0;
     /* etwas enger */
@@ -400,7 +395,7 @@ footer {
 }
 
 .hero-text p {
-    color: var(--redbrown);
+    color: #36363B;
     line-height: 1.7;
     font-size: 1.1rem;
     margin-bottom: 0;
@@ -536,7 +531,7 @@ footer {
     margin: 0 auto 60px;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: var(--redbrown);
+    color: #36363B;
 }
 
 /* Timeline Struktur */
@@ -589,7 +584,7 @@ footer {
 
 /* Textinhalt */
 .event-content {
-    color: var(--redbrown);
+    color: #36363B;
     flex: 1;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 16px;
@@ -611,13 +606,13 @@ footer {
 
 .event-content .date {
     font-weight: 700;
-    color: var(--iceyellow);
+    color: var(--redbrown);
     margin-bottom: 1rem;
 }
 
 .event-content .time {
     font-weight: 600;
-    color: #f1d2d9;
+    color: #36363B;
     margin-left: 0.3rem;
 }
 
