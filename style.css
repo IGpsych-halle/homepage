@@ -664,13 +664,14 @@ footer {
 .event-card {
     display: grid;
 
-    grid-template-columns: 1fr 80px 1fr;
+    grid-template-columns: minmax(0, 1fr) 80px minmax(0, 1fr);
 
     align-items: center;
 
     position: relative;
-
     z-index: 1;
+
+    min-height: 300px;
 }
 
 .event-card::before {
@@ -755,11 +756,18 @@ footer {
 }
 
 .event-image img {
-    width: 70%;
-    max-width: 340px;
+    width: 100%;
+    max-width: 300px;
+    max-height: 380px;
+
     height: auto;
+
     border-radius: 16px;
-    object-fit: cover;
+
+    object-fit: contain;
+
+    display: block;
+
     transition: transform 0.3s ease;
 }
 
