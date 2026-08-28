@@ -14,102 +14,302 @@ const jsonDateien = [
 // Daten sammeln
 const alleEintraege = [];
 
-// Funktion: Accordion erzeugen aus gruppierten Daten
+
+// =========================================
+// SCHWARZES BRETT
+// =========================================
+
 function zeigeEintraege(eintraege) {
+
   const kategorien = {};
 
-  // Gruppieren nach Kategorie
+  // Einträge nach Kategorie gruppieren
   eintraege.forEach(item => {
+
     if (!kategorien[item.category]) {
       kategorien[item.category] = [];
     }
+
     kategorien[item.category].push(item);
+
   });
 
-  console.log("Einträge erhalten:", eintraege);
+
   const container = document.getElementById("aktuellesContainer");
 
-  for (let kat in kategorien) {
-    const btn = document.createElement("button");
-    btn.className = "accordion";
-    btn.textContent = kat;
-    container.appendChild(btn);
+  // Container leeren
+  container.innerHTML = "";
 
-    const panel = document.createElement("div");
-    panel.className = "panel";
 
-    kategorien[kat].forEach(entry => {
-      const block = document.createElement("div");
-      block.className = "entry"; // neue CSS-Klasse
-      block.innerHTML = `<h3 class="entry-title">${entry.title}</h3>${entry.content}`;
+  // =========================================
+  // HAUPTCONTAINER
+  // =========================================
 
-      // Attachment-Link hinzufügen, falls vorhanden
+  const noticeboard = document.createElement("div");
+  noticeboard.className = "noticeboard";
+
+
+  // =========================================
+  // KATEGORIE-NAVIGATION
+  // =========================================
+
+  const navigation = document.createElement("nav");
+  navigation.className = "category-nav";
+
+  const navTitle = document.createElement("h2");
+  navTitle.textContent = "Kategorien";
+
+  navigation.appendChild(navTitle);
+
+
+  // =========================================
+  // INHALTSBEREICH
+  // =========================================
+
+  const content = document.createElement("div");
+  content.className = "category-content";
+
+
+  // =========================================
+  // FUNKTION: KATEGORIE ANZEIGEN
+  // =========================================
+
+  function zeigeKategorie(kategorie) {
+
+    // bisherigen Inhalt entfernen
+    content.innerHTML = "";
+
+    // Überschrift
+    const categoryTitle = document.createElement("h2");
+    categoryTitle.className = "category-title";
+    categoryTitle.textContent = kategorie;
+
+    content.appendChild(categoryTitle);
+
+
+    // Einträge dieser Kategorie
+    kategorien[kategorie].forEach(entry => {
+
+      const block = document.createElement("article");
+      block.className = "entry";
+
+
+      // -----------------------------------------
+      // Titel
+      // -----------------------------------------
+
+      const title = document.createElement("h3");
+      title.className = "entry-title";
+      title.textContent = entry.title;
+
+      block.appendChild(title);
+
+
+      // -----------------------------------------
+      // Inhalt
+      // -----------------------------------------
+
+      const fullContent = document.createElement("div");
+      fullContent.className = "entry-content";
+
+      fullContent.innerHTML = entry.content || "";
+
+      block.appendChild(fullContent);
+
+
+      // -----------------------------------------
+      // Read-More Button
+      // -----------------------------------------
+
+      const readMore = document.createElement("button");
+      readMore.className = "read-more";
+      readMore.textContent = "Mehr lesen";
+
+      block.appendChild(readMore);
+
+
+      // -----------------------------------------
+      // Attachment
+      // -----------------------------------------
+
       if (entry.attachment) {
+
         const link = document.createElement("a");
+
         link.href = entry.attachment;
         link.target = "_blank";
-        link.textContent = "📎 PDF herunterladen"; // kleines Icon zur Kennzeichnung
-        link.className = "attachment-link"; // CSS-Klasse für Styling
+        link.rel = "noopener noreferrer";
+
+        link.textContent = "📎 PDF herunterladen";
+        link.className = "attachment-link";
+
         block.appendChild(link);
       }
 
-      panel.appendChild(block);
+
+      // -----------------------------------------
+      // Read-More Funktion
+      // -----------------------------------------
+
+      readMore.addEventListener("click", () => {
+
+        block.classList.toggle("expanded");
+
+        if (block.classList.contains("expanded")) {
+
+          readMore.textContent = "Weniger anzeigen";
+
+        } else {
+
+          readMore.textContent = "Mehr lesen";
+
+        }
+
+      });
+
+
+      content.appendChild(block);
+
+      requestAnimationFrame(() => {
+
+      const isOverflowing =
+          fullContent.scrollHeight > fullContent.clientHeight;
+
+      if (!isOverflowing) {
+          readMore.style.display = "none";
+          fullContent.classList.add("no-overflow");
+      }
+
+
     });
 
-    container.appendChild(panel);
   }
 
-  console.log("Kategorien:", kategorien);
 
-  // Accordion aktivieren
-  document.querySelectorAll(".accordion").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const panel = btn.nextElementSibling;
-      btn.classList.toggle("active");
-      panel.classList.toggle("show");
+  // =========================================
+  // KATEGORIE-BUTTONS
+  // =========================================
+
+  Object.keys(kategorien).forEach((kategorie, index) => {
+
+    const button = document.createElement("button");
+
+    button.className = "category-button";
+    button.textContent = kategorie;
+
+
+    button.addEventListener("click", () => {
+
+      // alle Buttons deaktivieren
+      document
+        .querySelectorAll(".category-button")
+        .forEach(btn => btn.classList.remove("active"));
+
+      // geklickten Button aktivieren
+      button.classList.add("active");
+
+      // Kategorie anzeigen
+      zeigeKategorie(kategorie);
+
     });
+
+
+    navigation.appendChild(button);
+
+
+    // Erste Kategorie automatisch öffnen
+    if (index === 0) {
+
+      button.classList.add("active");
+      zeigeKategorie(kategorie);
+
+    }
+
   });
+
+
+  // Navigation + Content zusammensetzen
+  noticeboard.appendChild(navigation);
+  noticeboard.appendChild(content);
+
+  container.appendChild(noticeboard);
+
 }
 
-// Funktion: Alle JSON-Dateien laden
+
+// =========================================
+// JSON DATEIEN LADEN
+// =========================================
+
 function ladeAlleJSONs(dateien) {
+
   let geladen = 0;
 
   dateien.forEach(datei => {
+
     fetch(datei)
+
       .then(res => {
-        if (!res.ok) throw new Error(`Fehler beim Laden: ${datei}`);
+
+        if (!res.ok) {
+          throw new Error(`Fehler beim Laden: ${datei}`);
+        }
+
         return res.json();
+
       })
+
       .then(data => {
+
         alleEintraege.push(...data);
+
         geladen++;
 
-        // Wenn alle geladen wurden, dann anzeigen
         if (geladen === dateien.length) {
           zeigeEintraege(alleEintraege);
         }
+
       })
+
       .catch(err => {
-        console.error("Fehler beim Laden der Datei", datei, err);
+
+        console.error(
+          "Fehler beim Laden der Datei",
+          datei,
+          err
+        );
+
       });
+
   });
+
 }
+
 
 // Start
 ladeAlleJSONs(jsonDateien);
 
-//MOBILE FUNCTIONS//
+
+// =========================================
+// MOBILE NAVIGATION
+// =========================================
+
 document.addEventListener("DOMContentLoaded", () => {
+
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
 
-  hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
+  if (hamburger && navMenu) {
 
-    // Optional: Hamburger Animation (3 Striche -> X)
-    hamburger.classList.toggle("active");
-  });
+    hamburger.addEventListener("click", () => {
+
+      navMenu.classList.toggle("show");
+      hamburger.classList.toggle("active");
+
+    });
+
+  }
+
 });
 
 
