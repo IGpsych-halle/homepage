@@ -28,8 +28,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 60px;
-    /* ⬅ größer = dein gewünschter Look */
+    padding: 15px 60px;
+    
     background: var(--gold);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid rgba(255, 255, 255, 0.08);
@@ -66,7 +66,7 @@ nav {
     display: inline-block;
     padding: 10px 16px;
     border-radius: 10px;
-    color: var(--redbrown);
+    color: #36363B;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
@@ -74,16 +74,11 @@ nav {
 }
 
 .nav-links a:hover {
-    transform: translateY(-3px);
-    background: rgba(255, 255, 255, 0.1);
     color: var(--icewhite);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .nav-links a.active {
-    background: rgba(255, 255, 255, 0.18);
     color: var(--icewhite);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* === Responsive Anpassung === */
@@ -161,11 +156,6 @@ footer {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.file-category:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
 .file-category h2 {
     color: var(--gold);
     font-size: 1.8rem;
@@ -236,11 +226,6 @@ footer {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.team-section:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
-}
-
 .team-section h2 {
     font-size: 2rem;
     color: var(--gold);
@@ -257,7 +242,7 @@ footer {
 
 .team-section p {
     text-align: center;
-    color: var(--iceyellow);
+    color: #36363B;
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
 }
@@ -289,11 +274,6 @@ footer {
     white-space: normal;
 }
 
-.team-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
-}
-
 /* Bilder */
 .team-card img {
     width: 120px;
@@ -305,21 +285,11 @@ footer {
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.team-card:hover img {
-    transform: scale(1.06);
-    border-color: var(--gold);
-}
-
 /* Namen + Rollen */
 .team-card h3 {
     font-size: 1.25rem;
     color: var(--gold);
     margin: 0.4rem 0;
-}
-
-.team-card .contact a:hover {
-    color: var(--brown);
-    transform: scale(1.15);
 }
 
 /*Allgemeiner Kontakt Info*/
@@ -590,13 +560,7 @@ footer {
     background: rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 32px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.event-content:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .event-content h2 {
@@ -607,7 +571,7 @@ footer {
 
 .event-content .date {
     font-weight: 700;
-    color: var(--redbrown);
+    color: #36363B;
     margin-bottom: 1rem;
 }
 
@@ -634,14 +598,8 @@ footer {
     max-width: 340px;
     height: auto;
     border-radius: 16px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
-    border: 3px solid var(--icewhite);
     object-fit: cover;
     transition: transform 0.3s ease;
-}
-
-.event-image img:hover {
-    transform: scale(1.03);
 }
 
 /* Responsive Anpassung */
