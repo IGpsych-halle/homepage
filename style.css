@@ -745,28 +745,15 @@ footer {
 }
 
 .entry a {
-    color: var(--gold);
-    /* gut lesbares Blau */
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    transition: color 0.2s ease;
+    color: #36363B;
 }
 
 /* Hover & Fokus (auch für Tastaturnavigation wichtig) */
 .entry a:hover,
 a:focus {
-    color: var(--redbrown);
+    text-decoration: underline;
 }
 
-/* Bereits besuchte Links */
-.entry a:visited {
-    color: var(--icewhite);
-}
-
-/* Aktiver Klick */
-.entry a:active {
-    color: var(--icewhite);
-}
 
 .hamburger {
     display: none;
