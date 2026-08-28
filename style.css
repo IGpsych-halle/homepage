@@ -29,19 +29,25 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 15px 60px;
-    
     background: var(--icewhite);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(6px);
 }
 
 .logo {
-    height: 60px;
-    /* bewusst größer */
+    height: 80px;
     width: auto;
     object-fit: contain;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 10;
+
     flex-shrink: 0;
+
     transition: transform 0.25s ease, filter 0.25s ease;
 }
 
