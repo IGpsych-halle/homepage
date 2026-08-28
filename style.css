@@ -344,10 +344,10 @@ footer {
 .hero {
     position: relative;
 
-    width: min(1400px, calc(100% - 4rem));
-    height: min(720px, 75vh);
+    width: min(1500px, calc(100% - 2rem));
+    height: min(800px, 82vh);
 
-    margin: 3rem auto;
+    margin: 2rem auto;
 
     overflow: hidden;
 
