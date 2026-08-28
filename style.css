@@ -372,11 +372,11 @@ footer {
 
     object-fit: cover;
 
-    object-position: center 70%;
+    object-position: center 80%;
 
     display: block;
 
-    transform: scale(1.5);
+    transform: scale(1.25);
 
     transition: transform 0.5s ease;
 }
@@ -481,11 +481,11 @@ footer {
 .hero-text p {
     color: #36363B;
 
-    font-size: 1rem;
+    font-size: 0.95rem;
 
-    line-height: 1.65;
+    line-height: 1.55;
 
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.8rem 0;
 }
 
 
