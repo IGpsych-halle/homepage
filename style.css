@@ -692,7 +692,7 @@ footer {
 }
 
 .entry-title {
-    color: var(--gold);
+    color: #36363B;
     font-size: 1.2rem;
     margin-bottom: 0.4rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
