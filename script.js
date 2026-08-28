@@ -246,7 +246,7 @@ function zeigeEintraege(eintraege) {
 
   container.appendChild(noticeboard);
 
-} // Ende zeigeEintraege()
+ // Ende zeigeEintraege()
 
 
   // =========================================
