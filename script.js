@@ -195,58 +195,7 @@ function zeigeEintraege(eintraege) {
   } // Ende zeigeKategorie()
 
 
-  // =========================================
-  // KATEGORIE-BUTTONS ERSTELLEN
-  // =========================================
-
-  Object.keys(kategorien).forEach((kategorie, index) => {
-
-    const button = document.createElement("button");
-
-    button.className = "category-button";
-    button.textContent = kategorie;
-
-
-    button.addEventListener("click", () => {
-
-      // alle Buttons deaktivieren
-      document
-        .querySelectorAll(".category-button")
-        .forEach(btn => btn.classList.remove("active"));
-
-      // geklickten Button aktivieren
-      button.classList.add("active");
-
-      // Kategorie anzeigen
-      zeigeKategorie(kategorie);
-
-    });
-
-
-    navigation.appendChild(button);
-
-
-    // Erste Kategorie automatisch öffnen
-    if (index === 0) {
-
-      button.classList.add("active");
-      zeigeKategorie(kategorie);
-
-    }
-
-  }); // Ende Object.keys(...).forEach
-
-
-  // =========================================
-  // NAVIGATION + CONTENT ZUSAMMENSETZEN
-  // =========================================
-
-  noticeboard.appendChild(navigation);
-  noticeboard.appendChild(content);
-
-  container.appendChild(noticeboard);
-
- // Ende zeigeEintraege()
+  
 
 
   // =========================================
