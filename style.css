@@ -553,9 +553,10 @@ footer {
 .event-content {
     color: #36363B;
     flex: 1;
-    background: var(--icewhite);
+    background: white;
     border-radius: 16px;
     padding: 32px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
