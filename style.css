@@ -1362,6 +1362,119 @@ footer {
     }
 
 }
+
+/* =========================================================
+   AMBIENTE PARTIKEL
+========================================================= */
+
+.ambient-decoration {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+.ambient-emoji {
+    position: absolute;
+
+    font-size: 1.5rem;
+
+    opacity: 0.18;
+
+    filter: grayscale(15%);
+
+    animation: ambientFloat 8s ease-in-out infinite;
+}
+
+
+/* Positionen */
+
+.emoji-1 {
+    top: 18%;
+    right: 3%;
+    animation-delay: 0s;
+}
+
+.emoji-2 {
+    top: 34%;
+    right: 6%;
+    font-size: 1.3rem;
+    animation-delay: 1.5s;
+}
+
+.emoji-3 {
+    top: 52%;
+    right: 2%;
+    font-size: 1.7rem;
+    animation-delay: 3s;
+}
+
+.emoji-4 {
+    top: 70%;
+    right: 7%;
+    font-size: 1.2rem;
+    animation-delay: 4.5s;
+}
+
+.emoji-5 {
+    top: 43%;
+    left: 3%;
+    font-size: 1.4rem;
+    animation-delay: 2s;
+}
+
+.emoji-6 {
+    top: 76%;
+    left: 5%;
+    font-size: 1.2rem;
+    animation-delay: 5s;
+}
+
+
+/* Sanftes Schweben */
+
+@keyframes ambientFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(3deg);
+    }
+}
+
+
+/* =========================================================
+   CONTENT ÜBER DEKO
+========================================================= */
+
+.site-header,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 820px) {
+
+    .emoji-1,
+    .emoji-3,
+    .emoji-5 {
+        display: none;
+    }
+
+    .ambient-emoji {
+        opacity: 0.15;
+        font-size: 1.2rem;
+    }
+
+}
+
 /* ================= Mobile Navigation ================= */
 /* ===== Hamburger Button ===== */
 @media (max-width: 768px) {
