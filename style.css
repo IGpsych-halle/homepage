@@ -554,8 +554,7 @@ footer {
 
 
     .group-photo {
-        object-position: center 65%;
-        transform: scale(1.1);
+        transform: scale(1) translateY(-21%);
     }
 
 
