@@ -1215,7 +1215,6 @@ footer {
 /* ===== Hamburger Button ===== */
 @media (max-width: 768px) {
     .hamburger {
-        color: #36363B;
         display: flex;
         margin: 0.5rem auto 0;
         /* zentriert unter Logo */
@@ -1233,7 +1232,7 @@ footer {
     .hamburger span {
         width: 100%;
         height: 3px;
-        background-color: --var(--icewhite);
+        background-color: #36363B;
         border-radius: 2px;
         transition: all 0.3s ease;
     }
