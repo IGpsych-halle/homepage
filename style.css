@@ -944,21 +944,26 @@ footer {
    HAUPTCONTAINER
 ========================================= */
 
+/* =========================================================
+   SCHWARZES BRETT – DESKTOP
+========================================================= */
+
 .noticeboard {
     display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 2rem;
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 2.5rem;
     align-items: start;
 }
 
 
-/* =========================================
-   KATEGORIE-NAVIGATION
-========================================= */
+/* =========================================================
+   KATEGORIE-NAVIGATION DESKTOP
+========================================================= */
 
 .category-nav {
     position: sticky;
-    top: 1rem;
+    top: 1.5rem;
+
     align-self: start;
 
     display: flex;
@@ -966,51 +971,37 @@ footer {
 
     gap: 0.6rem;
 
-    max-height: calc(100vh - 2rem);
+    width: 100%;
 
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    scrollbar-width: none;
+    /* KEIN max-height */
+    /* KEIN overflow */
 }
 
-.category-nav::-webkit-scrollbar {
-    display: none;
-}
 
+/* Überschrift */
 
 .category-nav h2 {
-    color: #36363B;.event-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+    margin: 0 0 0.5rem 0;
 
-    .event-image img {
-        max-width: 80%;
-    }
+    color: var(--gold);
 
-    .timeline {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin: 0 0 0.7rem 0;
-    }
+    font-size: 1.2rem;
 }
 
 
-/* Kategorie-Buttons */
+/* Buttons */
 
 .category-button {
     width: 100%;
+    box-sizing: border-box;
+
+    padding: 0.8rem 1rem;
+
+    border: none;
+    border-radius: 10px;
 
     background: white;
     color: #36363B;
-
-    border: 2px solid #36363B;
-    border-radius: 10px;
-
-    padding: 0.8rem 0.7rem;
 
     text-align: left;
 
@@ -1030,21 +1021,28 @@ footer {
 
 .category-button:hover {
     transform: translateX(3px);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 
 .category-button.active {
-    background: var(--icewhite);
-    transform: translateX(3px);
+    background: var(--gold);
+    color: white;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 
-/* =========================================
+/* =========================================================
    INHALTSBEREICH
-========================================= */
+========================================================= */
 
 .category-content {
     min-width: 0;
+    width: 100%;
 }
 
 
