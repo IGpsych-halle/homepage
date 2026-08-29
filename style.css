@@ -990,11 +990,12 @@ footer {
         max-width: 80%;
     }
 
-    .timelin
+    .timeline {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin: 0 0 0.7rem 0;
+    }
 }
 
 
