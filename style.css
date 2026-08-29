@@ -958,11 +958,22 @@ footer {
 
 .category-nav {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 0.6rem;
 
-    position: sticky;
-    top: 7rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    /* Wichtig: nicht zentrieren */
+    justify-content: flex-start;
+
+    /* Scrollbereich beginnt wirklich links */
+    scroll-padding-left: 0;
+
+    /* kein sichtbarer Scrollbalken */
+    scrollbar-width: none;
 }
 
 
