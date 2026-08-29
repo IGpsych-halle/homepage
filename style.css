@@ -51,14 +51,6 @@ header {
     transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-/* Mobile-Ansicht Logo */
-@media (max-width: 768px) {
-    .logo {
-        height: 45px;
-        left: 10px;
-    }
-}
-
 nav {
     flex: 1;
     display: flex;
@@ -102,7 +94,8 @@ nav {
     }
 
     .logo {
-        height: 70px;
+        height: 45px;
+        left: 10px;
     }
 
     nav {
