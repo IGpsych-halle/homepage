@@ -144,7 +144,7 @@ footer {
 }
 
 .page-header h1 {
-    margin-top: 1.8rem;
+    margin-top: 2rem;
     font-size: 2rem;
     color: var(--gold);
 }
@@ -554,7 +554,8 @@ footer {
 
 
     .group-photo {
-        object-position: center 40%;
+        object-position: center 65%;
+        transform: scale(1.1);
     }
 
 
