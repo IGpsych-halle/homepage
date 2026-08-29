@@ -957,23 +957,25 @@ footer {
 ========================================= */
 
 .category-nav {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+
     display: flex;
-    align-items: center;
+    flex-direction: column;
+
     gap: 0.6rem;
 
-    overflow-x: auto;
-    overflow-y: hidden;
+    max-height: calc(100vh - 2rem);
 
-    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
 
-    /* Wichtig: nicht zentrieren */
-    justify-content: flex-start;
-
-    /* Scrollbereich beginnt wirklich links */
-    scroll-padding-left: 0;
-
-    /* kein sichtbarer Scrollbalken */
     scrollbar-width: none;
+}
+
+.category-nav::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -1304,24 +1306,35 @@ footer {
      * Horizontal scrollbar bei vielen Kategorien.
      */
 
-    .category-nav {
-        position: sticky;
-        top: 0;
+  .category-nav {
 
-        z-index: 10;
+        position: relative;
+        top: auto;
 
+        display: flex;
         flex-direction: row;
+        align-items: center;
+
+        gap: 0.6rem;
+
+        width: 100%;
+
+        max-height: none;
 
         overflow-x: auto;
+        overflow-y: hidden;
 
-        padding: 0.5rem;
+        padding: 0.2rem 0 0.8rem 0;
 
-        background: rgba(255, 255, 255, 0.95);
+        /* Wichtig: ganz links beginnen */
+        justify-content: flex-start;
 
-        border-radius: 10px;
+        /* Scrollverhalten */
+        scroll-behavior: smooth;
+        scroll-padding-left: 0;
 
-        box-shadow:
-            0 3px 10px rgba(0, 0, 0, 0.12);
+        /* Scrollbar verstecken */
+        scrollbar-width: none;
     }
 
 
