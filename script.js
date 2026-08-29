@@ -199,46 +199,62 @@ function zeigeEintraege(eintraege) {
 
 
   // =========================================
-  // KATEGORIE-BUTTONS
-  // =========================================
+// KATEGORIE-BUTTONS
+// =========================================
 
-  Object.keys(kategorien).forEach((kategorie, index) => {
+const kategorienListe = Object.keys(kategorien);
 
-    const button = document.createElement("button");
+kategorienListe.forEach((kategorie, index) => {
 
-    button.className = "category-button";
-    button.textContent = kategorie;
+  const button = document.createElement("button");
 
-
-    button.addEventListener("click", () => {
-
-      // alle Buttons deaktivieren
-      document
-        .querySelectorAll(".category-button")
-        .forEach(btn => btn.classList.remove("active"));
-
-      // geklickten Button aktivieren
-      button.classList.add("active");
-
-      // Kategorie anzeigen
-      zeigeKategorie(kategorie);
-
-    });
+  button.className = "category-button";
+  button.textContent = kategorie;
 
 
-    navigation.appendChild(button);
+  button.addEventListener("click", () => {
 
+    // Alle Buttons deaktivieren
+    navigation
+      .querySelectorAll(".category-button")
+      .forEach(btn => btn.classList.remove("active"));
 
-    // Erste Kategorie automatisch öffnen
-    if (index === 0) {
+    // Geklickten Button aktivieren
+    button.classList.add("active");
 
-      button.classList.add("active");
-      zeigeKategorie(kategorie);
-
-    }
+    // Kategorie anzeigen
+    zeigeKategorie(kategorie);
 
   });
 
+
+  navigation.appendChild(button);
+
+
+  // =========================================
+  // ERSTE KATEGORIE
+  // =========================================
+
+  if (index === 0) {
+
+    button.classList.add("active");
+
+    zeigeKategorie(kategorie);
+
+  }
+
+});
+
+
+// =========================================
+// MOBILE: NAVIGATION GANZ NACH LINKS
+// =========================================
+
+if (window.innerWidth <= 900) {
+
+  navigation.scrollLeft = 0;
+
+}
 
   // Navigation + Content zusammensetzen
   noticeboard.appendChild(navigation);
