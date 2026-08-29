@@ -94,8 +94,10 @@ nav {
     }
 
     .logo {
-        height: 45px;
+        height: 42px;
         left: 10px;
+        top: 30px;
+        transform: translateY(-50%);
     }
 
     nav {
