@@ -962,7 +962,7 @@ footer {
 
 .category-nav {
     position: sticky;
-    top: 1.5rem;
+    top: 6rem;
 
     align-self: start;
 
@@ -1028,8 +1028,8 @@ footer {
 
 
 .category-button.active {
-    background: var(--gold);
-    color: white;
+    background: var(--icewhite);
+    color: #36363B;
 
     box-shadow:
         0 4px 12px rgba(0, 0, 0, 0.15);
