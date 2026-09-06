@@ -27,12 +27,12 @@ body::before {
     z-index: 0;
     pointer-events: none;
 
-    background-image: url("assets/backgrounds/synapse2_bg.png");
+    background-image: url("assets/backgrounds/synapse_bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    opacity: 1;
+    opacity: 0.2;
 }
 
 header,
