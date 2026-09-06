@@ -334,7 +334,7 @@ footer {
 
 /*Allgemeiner Kontakt Info*/
 .contact-info {
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 1);
     padding: 1rem 2rem 1.5rem 2rem;
     /* oben etwas kleiner, unten gleich */
     border-radius: 14px;
