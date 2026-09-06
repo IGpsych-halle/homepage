@@ -22,10 +22,7 @@ body {
 body::before {
     content: "";
     position: fixed;
-
-    /* etwas größer als der Viewport,
-       damit bei Bewegung keine weißen Kanten sichtbar werden */
-    inset: -5%;
+    inset: 0;
 
     z-index: 0;
     pointer-events: none;
@@ -35,34 +32,7 @@ body::before {
     background-position: center;
     background-repeat: no-repeat;
 
-    /* Bild bleibt vollständig sichtbar */
     opacity: 1;
-
-    /* visuelle Hierarchie reduzieren */
-    filter:
-        blur(2px)
-        saturate(0.75)
-        contrast(0.85)
-        brightness(1.08);
-
-    /* ganz leichte Vergrößerung */
-    transform: scale(1.03);
-
-    animation: neuron-float 22s ease-in-out infinite alternate;
-}
-
-@keyframes neuron-float {
-    0% {
-        transform: scale(1.03) translate3d(-0.5%, -0.5%, 0);
-    }
-
-    50% {
-        transform: scale(1.05) translate3d(0.8%, 0.4%, 0);
-    }
-
-    100% {
-        transform: scale(1.03) translate3d(-0.3%, 0.8%, 0);
-    }
 }
 
 header,
