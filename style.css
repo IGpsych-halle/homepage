@@ -1103,7 +1103,7 @@ footer {
 .entry {
     color: #36363B;
 
-    background-color: var(--icewhite);
+    background-color: white;
 
     border-radius: 12px;
 
@@ -1191,7 +1191,7 @@ footer {
     background:
         linear-gradient(
             transparent,
-            var(--icewhite)
+            white
         );
 
     pointer-events: none;
