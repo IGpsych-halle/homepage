@@ -40,8 +40,8 @@ body {
 .background-decoration path {
     fill: none;
     stroke: #aa1945;
-    stroke-width: 4;
-    opacity: 0.11;
+    stroke-width: 8;
+    opacity: 0.3;
     stroke-linecap: round;
 }
 
@@ -58,6 +58,15 @@ header {
     background: var(--icewhite);
     border-bottom: 2px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(6px);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #36363B;
+    font-size: 0.9rem;
+    z-index: 2;
+    background: var(--icewhite);
 }
 
 .logo {
