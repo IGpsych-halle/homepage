@@ -27,7 +27,7 @@ body::before {
     z-index: 0;
     pointer-events: none;
 
-    background-image: url("assets/backgrounds/synapse_bg.png");
+    background-image: url("assets/backgrounds/synapse2_bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -189,7 +189,7 @@ footer {
 }
 
 .file-category {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 1);
     border-radius: 16px;
     padding: 2rem;
     margin-bottom: 2rem;
