@@ -1300,7 +1300,7 @@ footer {
 
 
 .entry .attachment-link:hover {
-    color: white;
+    color: #36363B;
 
     transform: translateY(-1px);
 }
@@ -1308,12 +1308,6 @@ footer {
 
 .entry a {
     color: #36363B;
-}
-
-
-.entry a:hover,
-.entry a:focus {
-    text-decoration: underline;
 }
 
 .hamburger {
