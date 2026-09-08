@@ -129,22 +129,40 @@ function zeigeEintraege(eintraege) {
 
 
       // -----------------------------------------
-      // Attachment
+      // Attachments
       // -----------------------------------------
 
-      if (entry.attachment) {
+      let attachments = [];
 
-        const link = document.createElement("a");
-
-        link.href = entry.attachment;
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-
-        link.textContent = "📎 PDF herunterladen";
-        link.className = "attachment-link";
-
-        block.appendChild(link);
+      // Neues Format: mehrere Anhänge
+      if (Array.isArray(entry.attachments)) {
+          attachments = entry.attachments;
       }
+
+      // Altes Format weiterhin unterstützen
+      else if (entry.attachment) {
+          attachments = [entry.attachment];
+      }
+
+      attachments.forEach(attachmentPath => {
+
+          const link = document.createElement("a");
+
+          link.href = attachmentPath;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.className = "attachment-link";
+
+          // Dateiname aus dem Pfad holen
+          const fileName = decodeURIComponent(
+          attachmentPath.split("/").pop()
+          );
+           
+          link.textContent = `📎 ${fileName}`;
+
+          block.appendChild(link);
+
+      });
 
 
       // -----------------------------------------
