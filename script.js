@@ -360,7 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 particlesJS.load(
     "particles-js",
-    "assets/particles/particles-config.json",
+    "assets/particles/particlesjs-config.json",
     function () {
         console.log("Particles.js geladen");
     }
