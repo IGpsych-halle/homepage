@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SFTP_TARGET="a6bdf@wp3.itz.uni-halle.de"
+SFTP_TARGET="a6bfd@wp3.itz.uni-halle.de"
 REMOTE_ROOT="/public"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
