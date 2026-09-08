@@ -68,7 +68,7 @@
     }
   },
   "interactivity": {
-    "detect_on": "canvas",
+    "detect_on": "window",
     "events": {
       "onhover": {
         "enable": true,
@@ -84,7 +84,7 @@
       "grab": {
         "distance": 121.49388885739049,
         "line_linked": {
-          "opacity": 1
+          "opacity": 0.5
         }
       },
       "bubble": {
