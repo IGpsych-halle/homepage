@@ -1239,16 +1239,16 @@ footer {
 .entry-content table {
     width: 100% !important;
     max-width: 100% !important;
-
-    table-layout: fixed;
+    table-layout: auto;
+    border-collapse: collapse;
 }
 
 .entry-content td,
 .entry-content th {
-    width: auto !important;
-    max-width: 100% !important;
-
+    max-width: 100%;
+    white-space: normal !important;
     overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 
@@ -1388,6 +1388,21 @@ footer {
     .entry-content img {
         max-width: 100% !important;
         height: auto !important;
+    }
+
+    .entry-content table {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto;
+    table-layout: auto;
+    }
+
+    .entry-content td,
+    .entry-content th {
+        white-space: normal !important;
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
 
