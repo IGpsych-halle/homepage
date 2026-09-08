@@ -358,6 +358,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+particlesJS.load(
+    "particles-js",
+    "assets/particles/particles-config.json",
+    function () {
+        console.log("Particles.js geladen");
+    }
+);
+
 
 
 
