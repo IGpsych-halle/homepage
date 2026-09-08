@@ -1111,6 +1111,12 @@ footer {
 
     margin-bottom: 1.2rem;
 
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    overflow: hidden;
+
     box-shadow:
         0 3px 12px rgba(0, 0, 0, 0.12);
 
@@ -1159,17 +1165,48 @@ footer {
     font-size: 1rem;
     line-height: 1.6;
 
-    /*
-     * Der Text wird zunächst gekürzt.
-     */
     max-height: 12rem;
 
     overflow: hidden;
 
     position: relative;
 
+    min-width: 0;
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
     transition:
         max-height 0.4s ease;
+}
+
+/* Importierte Bilder aus E-Mails responsiv halten */
+.entry-content img {
+    display: block;
+
+    max-width: 100% !important;
+    height: auto !important;
+
+    object-fit: contain;
+}
+
+/* Auch andere importierte Elemente dürfen den Eintrag nicht sprengen */
+.entry-content table,
+.entry-content iframe,
+.entry-content video {
+    max-width: 100% !important;
+}
+
+/* Lange Links und andere problematische Inhalte umbrechen */
+.entry-content a,
+.entry-content span,
+.entry-content td,
+.entry-content th {
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 
@@ -1197,6 +1234,21 @@ footer {
     pointer-events: none;
 
     transition: opacity 0.2s ease;
+}
+
+.entry-content table {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    table-layout: fixed;
+}
+
+.entry-content td,
+.entry-content th {
+    width: auto !important;
+    max-width: 100% !important;
+
+    overflow-wrap: anywhere;
 }
 
 
@@ -1320,6 +1372,24 @@ footer {
 ========================================= */
 
 @media (max-width: 768px) {
+
+    .entry {
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .entry-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .entry-content img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
 
     .noticeboard {
         grid-template-columns: 1fr;
