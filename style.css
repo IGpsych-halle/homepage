@@ -43,6 +43,26 @@ body {
     );
 }
 
+@media (max-width: 768px) {
+    #particles-js {
+        -webkit-mask-image: radial-gradient(
+            ellipse 70% 55% at center,
+            transparent 0%,
+            transparent 50%,
+            rgba(0, 0, 0, 0.2) 65%,
+            black 95%
+        );
+
+        mask-image: radial-gradient(
+            ellipse 70% 55% at center,
+            transparent 0%,
+            transparent 50%,
+            rgba(0, 0, 0, 0.2) 65%,
+            black 95%
+        );
+    }
+}
+
 body > *:not(#particles-js) {
     position: relative;
     z-index: 1;
