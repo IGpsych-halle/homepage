@@ -15,8 +15,15 @@ body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     margin: 0;
     line-height: 1.4;
-    height: auto;
+
     min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 #particles-js {
@@ -61,11 +68,6 @@ body {
             black 95%
         );
     }
-}
-
-body > *:not(#particles-js) {
-    position: relative;
-    z-index: 1;
 }
 
 header,
